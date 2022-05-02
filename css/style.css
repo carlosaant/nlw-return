@@ -1,0 +1,15 @@
+/* import fonts - google */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+/* usage - font-family: 'DM Sans', sans-serif;*/
+
+/* rem - propriedade relativa
+
+  tamanho padrão fonte navegador: 16px
+ */
+:root {
+  /* 62.5% == 10px aproximadamente */
+  font-size: 100%;
+}
+
+/* font-size: 1rem  - equivale a 100% do font-size definido no root*/
