@@ -9,7 +9,13 @@
  */
 :root {
   /* 62.5% == 10px aproximadamente */
-  font-size: 100%;
+  font-size: 62.5%;
 }
 
 /* font-size: 1rem  - equivale a 100% do font-size definido no root*/
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  /* 1.6 define o font para aproximadamente 16px */
+  font-size: 1.6rem;
+}
