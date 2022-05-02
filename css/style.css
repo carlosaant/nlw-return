@@ -10,6 +10,9 @@
 :root {
   /* 62.5% == 10px aproximadamente */
   font-size: 62.5%;
+  --primary-color: hsl(170, 100%, 26%);
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
 }
 
 /* font-size: 1rem  - equivale a 100% do font-size definido no root*/
