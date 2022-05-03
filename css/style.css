@@ -1,6 +1,7 @@
 /* import fonts - google */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
+/*  ==================================================GERAL==================== */
 * {
   margin: 0;
   box-sizing: border-box;
@@ -21,7 +22,7 @@
   --brand-beige: hsl(39, 100%, 97%);
   --brand-green-light: hsl(148, 23%, 89%);
 }
-/* -------------------------------------------------------------------- */
+
 /* font-size: 1rem  - equivale a 100% do font-size definido no root*/
 /* 1rem = 10px */
 /* obs: para saber o valor em rem - qntidade em pixel/10 */
@@ -30,6 +31,14 @@ body {
   font-family: 'DM Sans', sans-serif;
   /* 1.6 define o font para aproximadamente 16px */
   font-size: 1.6rem;
+  text-align: center;
+}
+
+/* segue a mesma ideia do .content, para reutilizar em outras sessoes sem ficar repetindo o mesmo conteudo */
+.wrapper {
+  width: 37.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*  ==================================================HEADER==================== */
@@ -55,13 +64,8 @@ header::before {
 /* ------------------------------------------- */
 
 header {
-  width: 37.5rem;
-  height: 108rem;
-
-  text-align: center;
-
-  margin-left: auto;
-  margin-right: auto;
+  /* height: 108rem; */
+  margin-top: 4.1rem;
 }
 
 header h4 {
