@@ -4,6 +4,7 @@
 /*  ==================================================GERAL==================== */
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -21,6 +22,9 @@
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97%);
   --brand-green-light: hsl(148, 23%, 89%);
+
+  /* height do elemento conforme figma, o mesmo se daria somando padding top e bottom */
+  --nav-height: 7.2rem;
 }
 
 /* font-size: 1rem  - equivale a 100% do font-size definido no root*/
@@ -39,6 +43,8 @@ body {
   width: 37.5rem;
   margin-left: auto;
   margin-right: auto;
+
+  padding-inline: 2.4rem;
 }
 
 /*  ==================================================HEADER==================== */
@@ -48,7 +54,8 @@ header::before {
   content: '';
   /* 100vw pega toda largura da viewport da pagina */
   width: 100vw;
-  height: 108rem;
+  /* calc para manter a proporçao msmo com o fixed Nav sobreposto */
+  height: calc(108rem + var(--nav-height));
   background-color: var(--brand-green-light);
   /* para o elemento aparecer, ele precisa ter um display */
   display: block;
@@ -65,7 +72,8 @@ header::before {
 
 header {
   /* height: 108rem; */
-  margin-top: 4.1rem;
+  /* calc faz a soma do margin-top 4.1 com o height do nav, ja que agora ele esta fixed e sobreposto aos elementos */
+  margin-top: calc(4.1rem + var(--nav-height));
 }
 
 header h4 {
@@ -130,7 +138,7 @@ header img {
   /* para posicionar a imagem um pouco para baixo, mexendo apenas o eixo do objeto dentro da "caixa" */
   /* objetct-position: 0 2rem */
 
-  filter: drop-shadow(0px -3px 3px var(--primary-color));
+  /* filter: drop-shadow(0px -3px 3px var(--primary-color)); */
 }
 
 .div-stats {
@@ -177,8 +185,44 @@ header img {
 
 /*  ==================================================NAVIGATION==================== */
 
-nav {
+/* 1º versao NAV */
+/* nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  height: var(--nav-height);
+
+  padding-block: 1.6rem;
+
+  /* fixar o menu, para qndo scroll */
+/* position: fixed; */
+/* top: 0; */
+/* left: 50%; */
+/* deslocar apenas a metade do tamanho do elemento, para centralizar */
+/* transform: translateX(-50%); */
+/* }  */
+
+nav {
+  display: flex;
+  height: var(--nav-height);
+
+  /* fixar o menu, para qndo scroll */
+  position: fixed;
+  top: 0;
+  left: 50%;
+  /* deslocar apenas a metade do tamanho do elemento, para centralizar */
+  transform: translateX(-50%);
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.scroll {
+  background-color: var(--primary-color);
+  /* qndo scroll vai pegar toda a largura da viewport */
+  width: 100vw;
 }
