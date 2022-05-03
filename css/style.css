@@ -21,7 +21,7 @@
   --brand-beige: hsl(39, 100%, 97%);
   --brand-green-light: hsl(148, 23%, 89%);
 }
-
+/* -------------------------------------------------------------------- */
 /* font-size: 1rem  - equivale a 100% do font-size definido no root*/
 /* 1rem = 10px */
 /* obs: para saber o valor em rem - qntidade em pixel/10 */
@@ -31,6 +31,28 @@ body {
   /* 1.6 define o font para aproximadamente 16px */
   font-size: 1.6rem;
 }
+
+/*  ==================================================HEADER==================== */
+/* ------------------- aula 2 ---------------- */
+/* para fazer o backgroud atras do header ate a metade dos stats, conforme figma */
+header::before {
+  content: '';
+  /* 100vw pega toda largura da viewport da pagina */
+  width: 100vw;
+  height: 108rem;
+  background-color: var(--brand-green-light);
+  /* para o elemento aparecer, ele precisa ter um display */
+  display: block;
+
+  /* elemento colado nas extremidades da viewport */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* z-index: 0   - padrao de todo elemento */
+  z-index: -1;
+}
+/* ------------------------------------------- */
 
 header {
   width: 37.5rem;
@@ -42,7 +64,7 @@ header {
   margin-right: auto;
 }
 
-h4 {
+header h4 {
   font-size: 1.4rem;
   line-height: 150%;
 
@@ -52,7 +74,7 @@ h4 {
   color: var(--primary-color);
 }
 
-h1 {
+header h1 {
   font-size: 3.4rem;
   line-height: 130%;
   color: var(--headline);
@@ -60,7 +82,7 @@ h1 {
   margin-bottom: 2.4rem;
 }
 
-p {
+header p {
   width: 32.7rem;
   font-size: 1.8rem;
   line-height: 150%;
@@ -71,7 +93,7 @@ p {
   margin-bottom: 3.2rem;
 }
 
-button {
+header button {
   background: var(--primary-color);
   width: 26.3rem;
   height: 5.2rem;
@@ -148,22 +170,11 @@ header img {
   color: var(--headline);
   margin-bottom: 0.4rem;
 }
-/* ------------------- aula 2 ---------------- */
-/* para fazer o backgroud atras do header ate a metade dos stats, conforme figma */
-header::before {
-  content: '';
-  /* 100vw pega toda largura da viewport da pagina */
-  width: 100vw;
-  height: 108rem;
-  background-color: var(--brand-green-light);
-  /* para o elemento aparecer, ele precisa ter um display */
-  display: block;
 
-  /* elemento colado nas extremidades da viewport */
-  position: absolute;
-  top: 0;
-  left: 0;
+/*  ==================================================NAVIGATION==================== */
 
-  /* z-index: 0   - padrao de todo elemento */
-  z-index: -1;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
