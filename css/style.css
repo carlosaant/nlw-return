@@ -16,6 +16,7 @@
   /* 62.5% == 10px aproximadamente */
   font-size: 62.5%;
   --primary-color: hsl(170, 100%, 26%);
+  --back-color: hsl(148, 23%, 89%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
 }
@@ -37,11 +38,17 @@ header {
 
   margin-left: auto;
   margin-right: auto;
+
+  background: var(--back-color);
 }
 
 h4 {
   font-size: 1.4rem;
   line-height: 150%;
+
+  margin-top: 4.1rem;
+  margin-bottom: 1.6rem;
+
   color: var(--primary-color);
 }
 
@@ -49,6 +56,19 @@ h1 {
   font-size: 3.4rem;
   line-height: 130%;
   color: var(--headline);
+
+  margin-bottom: 2.4rem;
+}
+
+p {
+  width: 32.7rem;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--paragraph);
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.2rem;
 }
 
 button {
@@ -72,14 +92,39 @@ button {
   /* o flex tem o mesmo comportamento do block para os elementos fora */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 6rem;
 }
 
-h3 {
-  font-size: 4.8rem;
-  color: var(--paragraph);
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-p {
+.div-numbers {
+  width: 32.7rem;
+  height: 47rem;
+
+  background: #fffaf1;
+
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-numbers p {
   font-size: 1.6rem;
+  line-height: 150%;
   color: var(--primary-color);
+}
+
+.div-numbers h3 {
+  font-size: 4.8rem;
+  line-height: 130%;
+  color: var(--headline);
 }
