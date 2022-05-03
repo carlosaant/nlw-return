@@ -33,6 +33,7 @@ body {
 
 header {
   width: 37.5rem;
+  height: 108rem;
 
   text-align: center;
 
@@ -99,6 +100,9 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  /* filter: blur(1.8rem); */
+  filter: drop-shadow(0px -1px 1px var(--primary-color));
 }
 
 .div-numbers {
@@ -128,3 +132,4 @@ img {
   line-height: 130%;
   color: var(--headline);
 }
+/* -------------------------- */
