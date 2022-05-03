@@ -226,3 +226,10 @@ nav.scroll {
   /* qndo scroll vai pegar toda a largura da viewport */
   width: 100vw;
 }
+
+nav.scroll svg:nth-child(1) path {
+  fill: #fff;
+}
+nav.scroll svg:nth-child(2) path {
+  stroke: #fff;
+}
