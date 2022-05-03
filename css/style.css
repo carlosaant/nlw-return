@@ -16,9 +16,10 @@
   /* 62.5% == 10px aproximadamente */
   font-size: 62.5%;
   --primary-color: hsl(170, 100%, 26%);
-  --back-color: hsl(148, 23%, 89%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
+  --brand-beige: hsl(39, 100%, 97%);
+  --brand-green-light: hsl(148, 23%, 89%);
 }
 
 /* font-size: 1rem  - equivale a 100% do font-size definido no root*/
@@ -39,8 +40,6 @@ header {
 
   margin-left: auto;
   margin-right: auto;
-
-  background: var(--back-color);
 }
 
 h4 {
@@ -96,40 +95,75 @@ button {
   margin-bottom: 6rem;
 }
 
-img {
+header img {
+  width: 26.4rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
 
-  /* filter: blur(1.8rem); */
-  filter: drop-shadow(0px -1px 1px var(--primary-color));
+  /* para posicionar a imagem um pouco para baixo, mexendo apenas o eixo do objeto dentro da "caixa" */
+  /* objetct-position: 0 2rem */
+
+  filter: drop-shadow(0px -3px 3px var(--primary-color));
 }
 
-.div-numbers {
+.div-stats {
   width: 32.7rem;
-  height: 47rem;
+  /* height: 47rem; */
 
-  background: #fffaf1;
-
+  background: var(--brand-beige);
+  /* 
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
+  /* pode ser substituido por margin-inline = atua sobre o eixo X */
+  margin-inline: auto;
+
+  /* para nao colocar o height */
+  /* block = atua sobre o eixo Y */
+  padding-block: 4rem;
+
   border-radius: 0.6rem;
+  border: 1px solid var(--brand-green-light);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+
+  /* aplica separação nos elementos - 60px */
+  gap: 6rem;
 }
 
-.div-numbers p {
+.stat p {
   font-size: 1.6rem;
   line-height: 150%;
   color: var(--primary-color);
+
+  margin: 0;
 }
 
-.div-numbers h3 {
+.stat h3 {
   font-size: 4.8rem;
   line-height: 130%;
   color: var(--headline);
+  margin-bottom: 0.4rem;
 }
-/* -------------------------- */
+/* ------------------- aula 2 ---------------- */
+/* para fazer o backgroud atras do header ate a metade dos stats, conforme figma */
+header::before {
+  content: '';
+  /* 100vw pega toda largura da viewport da pagina */
+  width: 100vw;
+  height: 108rem;
+  background-color: var(--brand-green-light);
+  /* para o elemento aparecer, ele precisa ter um display */
+  display: block;
+
+  /* elemento colado nas extremidades da viewport */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* z-index: 0   - padrao de todo elemento */
+  z-index: -1;
+}
