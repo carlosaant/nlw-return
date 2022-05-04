@@ -243,6 +243,9 @@ nav {
   left: 50%;
   /* deslocar apenas a metade do tamanho do elemento, para centralizar */
   transform: translateX(-50%);
+
+  /* subir 100 camadas, para ficar por cima, por conta do scrollreveal, que estava sobrepondo */
+  z-index: 100;
 }
 
 nav .wrapper {

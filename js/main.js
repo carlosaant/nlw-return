@@ -24,4 +24,10 @@ ScrollReveal({
   origin: 'top', //vai se originar do topo para baixo, de cima para baixo
   distance: '30px',
   duration: 500
-}).reveal('#home');
+}).reveal(`
+#home, 
+#home img,
+#home .stats,
+#services,
+#services header,
+#services card`); //sequencia qual aparece primeiro
