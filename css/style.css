@@ -298,6 +298,11 @@ body.menu-expanded .close-menu {
   visibility: visible;
 }
 
+/*por padrao ele vai ser jogado para baixo, por causa da animação CSS apenas, para surgir de baixo  */
+.menu {
+  transform: translateY(100%);
+}
+
 body.menu-expanded .menu {
   position: fixed;
   top: 0;
@@ -308,6 +313,11 @@ body.menu-expanded .menu {
   height: 100vh;
 
   padding-top: var(--nav-height);
+
+  /* adicionando efeito transiçao CSS - animação */
+  transition: transform 300ms;
+  /* ao abrir ele volta para cima que por padrao estava em translateY(100%) */
+  transform: translateY(0);
 }
 
 /* nav tambem possui o position fixed, entao nesse caso usa o relative para "tirar" o posicionamento fixed do nav*/
