@@ -30,6 +30,11 @@
 /* font-size: 1rem  - equivale a 100% do font-size definido no root*/
 /* 1rem = 10px */
 /* obs: para saber o valor em rem - qntidade em pixel/10 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -47,13 +52,17 @@ body {
   padding-inline: 2.4rem;
 }
 
+ul {
+  list-style: none;
+}
+
 /*  ==================================================HEADER==================== */
 /* ------------------- aula 2 ---------------- */
 /* para fazer o backgroud atras do header ate a metade dos stats, conforme figma */
 header::before {
   content: '';
   /* 100vw pega toda largura da viewport da pagina */
-  width: 100vw;
+  width: 100%;
   /* calc para manter a proporçao msmo com o fixed Nav sobreposto */
   height: calc(108rem + var(--nav-height));
   background-color: var(--brand-green-light);
@@ -232,4 +241,25 @@ nav.scroll svg:nth-child(1) path {
 }
 nav.scroll svg:nth-child(2) path {
   stroke: #fff;
+}
+
+/*  ======================NAVIGATION MENU EXPANDED==================== */
+
+/* quando body nao tiver a classe menu.expanded */
+.menu,
+.close {
+  visibility: hidden;
+}
+
+/* quando o body tiver a classe menu.expanded */
+body.menu-expanded .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+}
+
+/* nav tambem possui o position fixed, entao nesse caso usa o relative para "tirar" o posicionamento fixed do nav*/
+body.menu-expanded nav {
+  position: relative;
 }
