@@ -239,7 +239,7 @@ nav.scroll {
 nav.scroll svg:nth-child(1) path {
   fill: #fff;
 }
-nav.scroll svg:nth-child(2) path {
+nav.scroll button path {
   stroke: #fff;
 }
 
