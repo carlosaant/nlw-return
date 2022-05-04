@@ -23,6 +23,9 @@
   --brand-beige: hsl(39, 100%, 97%);
   --brand-green-light: hsl(148, 23%, 89%);
 
+  /* vai ser aplicado a todo body */
+  --brand-green-light2: hsl(180, 14%, 97%);
+
   /* height do elemento conforme figma, o mesmo se daria somando padding top e bottom */
   --nav-height: 7.2rem;
 }
@@ -44,6 +47,8 @@ body {
 
   /* sobrepor, tamanho do body etc deixar o nav qndo scroll por cima, contar o tamanho dele*/
   overflow: overlay;
+
+  background-color: var(--brand-green-light2);
 }
 
 /* segue a mesma ideia do .content, para reutilizar em outras sessoes sem ficar repetindo o mesmo conteudo */
@@ -57,6 +62,13 @@ body {
 
 ul {
   list-style: none;
+}
+
+/* todo Section, por definiçao (conforme figma) tem um espaço TOP e Bottom de 100px, um padding - para os elementos */
+section {
+  /* ou padding-block */
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 /*  ==================================================HEADER==================== */
@@ -361,3 +373,54 @@ body.menu-expanded button path {
 }
 
 /*  ======================SERVIÇOS==================== */
+
+/* section services referenciado pelo ID acessando as tags */
+#services header h4 {
+  font-size: 1.4rem;
+  line-height: 150%;
+
+  color: var(--primary-color);
+
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+
+  /* margin entre os elementos conforme figma */
+  margin-bottom: 1.6rem;
+}
+
+#services header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+
+  color: var(--headline);
+
+  margin-bottom: 6rem;
+}
+
+/* AULA 03 - Sobre não aplicar LarguraxAltura nos cards: como a div ela ja é um display block, ela ja ocupa toda a largura
+ do espaço que ela esta = 100% / oque precisa fazer nesse caso é aplicar os outros espaços internosXexternos conforme a 
+ estrutura do Figma ou etc*/
+
+/* #services apenas para melhor identificação do card, e caso for usar o card fora da section #services, nao terao essas configuraçoes*/
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  /* espaço entre os elementos filhos, no caso .card */
+  gap: 3.2rem;
+}
+
+#services .card {
+  padding: 2.4rem;
+  text-align: left;
+
+  background: #ffffff;
+
+  border: 1px solid var(--brand-green-light);
+  border-radius: 0.6rem;
+}
+
+#services .card h3 {
+  /* ou margin-block */
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
+}
