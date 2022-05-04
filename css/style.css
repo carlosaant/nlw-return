@@ -245,21 +245,43 @@ nav.scroll svg:nth-child(2) path {
 
 /*  ======================NAVIGATION MENU EXPANDED==================== */
 
+/* quando transbordar as laterias para nao aparecer as barras de rolagem */
+body.menu-expanded {
+  overflow: hidden;
+}
+
 /* quando body nao tiver a classe menu.expanded */
 .menu,
-.close {
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
   visibility: hidden;
 }
 
 /* quando o body tiver a classe menu.expanded */
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
 body.menu-expanded .menu {
   position: fixed;
   top: 0;
   left: 0;
   background-color: var(--primary-color);
+
+  width: 100vw;
+  height: 100vh;
 }
 
 /* nav tambem possui o position fixed, entao nesse caso usa o relative para "tirar" o posicionamento fixed do nav*/
 body.menu-expanded nav {
   position: relative;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
