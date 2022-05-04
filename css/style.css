@@ -76,10 +76,10 @@ section {
   padding-bottom: 10rem;
 }
 
-/*  ==================================================HEADER==================== */
+/*  ==================================================HEADER - HOME ==================== */
 /* ------------------- aula 2 ---------------- */
 /* para fazer o backgroud atras do header ate a metade dos stats, conforme figma */
-header::before {
+#home::before {
   content: '';
   /* 100vw pega toda largura da viewport da pagina */
   width: 100%;
@@ -99,14 +99,14 @@ header::before {
 }
 /* ------------------------------------------- */
 
-header {
+#home {
   /* height: 108rem; */
   /* calc faz a soma do margin-top 4.1 com o height do nav, ja que agora ele esta fixed e sobreposto aos elementos */
   /* margin-top: calc(4.1rem + var(--nav-height)); */
   padding-top: calc(4.1rem + var(--nav-height));
 }
 
-header h4 {
+#home h4 {
   font-size: 1.4rem;
   line-height: 150%;
 
@@ -116,7 +116,7 @@ header h4 {
   color: var(--primary-color);
 }
 
-header h1 {
+#home h1 {
   font-size: 3.4rem;
   line-height: 130%;
   color: var(--headline);
@@ -124,7 +124,7 @@ header h1 {
   margin-bottom: 2.4rem;
 }
 
-header p {
+#home p {
   width: 32.7rem;
   font-size: 1.8rem;
   line-height: 150%;
@@ -135,7 +135,7 @@ header p {
   margin-bottom: 3.2rem;
 }
 
-header button {
+#home button {
   background: var(--primary-color);
   width: 26.3rem;
   height: 5.2rem;
@@ -159,7 +159,7 @@ header button {
   margin-bottom: 6rem;
 }
 
-header img {
+#home img {
   width: 26.4rem;
   display: block;
   margin-left: auto;
@@ -171,7 +171,7 @@ header img {
   /* filter: drop-shadow(0px -3px 3px var(--primary-color)); */
 }
 
-.div-stats {
+#home .div-stats {
   width: 32.7rem;
   /* height: 47rem; */
 
@@ -198,7 +198,7 @@ header img {
   gap: 6rem;
 }
 
-.stat p {
+#home .stat p {
   font-size: 1.6rem;
   line-height: 150%;
   color: var(--primary-color);
@@ -206,7 +206,7 @@ header img {
   margin: 0;
 }
 
-.stat h3 {
+#home .stat h3 {
   font-size: 4.8rem;
   line-height: 130%;
   color: var(--headline);
