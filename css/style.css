@@ -30,6 +30,11 @@
   --nav-height: 7.2rem;
 }
 
+html {
+  /* scroll suave */
+  scroll-behavior: smooth;
+}
+
 /* font-size: 1rem  - equivale a 100% do font-size definido no root*/
 /* 1rem = 10px */
 /* obs: para saber o valor em rem - qntidade em pixel/10 */
