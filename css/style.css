@@ -102,7 +102,8 @@ header::before {
 header {
   /* height: 108rem; */
   /* calc faz a soma do margin-top 4.1 com o height do nav, ja que agora ele esta fixed e sobreposto aos elementos */
-  margin-top: calc(4.1rem + var(--nav-height));
+  /* margin-top: calc(4.1rem + var(--nav-height)); */
+  padding-top: calc(4.1rem + var(--nav-height));
 }
 
 header h4 {
