@@ -41,6 +41,9 @@ body {
   /* 1.6 define o font para aproximadamente 16px */
   font-size: 1.6rem;
   text-align: center;
+
+  /* sobrepor, tamanho do body etc deixar o nav qndo scroll por cima, contar o tamanho dele*/
+  overflow: overlay;
 }
 
 /* segue a mesma ideia do .content, para reutilizar em outras sessoes sem ficar repetindo o mesmo conteudo */
