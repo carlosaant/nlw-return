@@ -76,143 +76,6 @@ section {
   padding-bottom: 10rem;
 }
 
-/*  ==================================================HEADER - HOME ==================== */
-/* ------------------- aula 2 ---------------- */
-/* para fazer o backgroud atras do header ate a metade dos stats, conforme figma */
-#home::before {
-  content: '';
-  /* 100vw pega toda largura da viewport da pagina */
-  width: 100%;
-  /* calc para manter a proporçao msmo com o fixed Nav sobreposto */
-  height: calc(108rem + var(--nav-height));
-  background-color: var(--brand-green-light);
-  /* para o elemento aparecer, ele precisa ter um display */
-  display: block;
-
-  /* elemento colado nas extremidades da viewport */
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  /* z-index: 0   - padrao de todo elemento */
-  z-index: -1;
-}
-/* ------------------------------------------- */
-
-#home {
-  /* height: 108rem; */
-  /* calc faz a soma do margin-top 4.1 com o height do nav, ja que agora ele esta fixed e sobreposto aos elementos */
-  /* margin-top: calc(4.1rem + var(--nav-height)); */
-  padding-top: calc(4.1rem + var(--nav-height));
-}
-
-#home h4 {
-  font-size: 1.4rem;
-  line-height: 150%;
-
-  margin-top: 4.1rem;
-  margin-bottom: 1.6rem;
-
-  color: var(--primary-color);
-}
-
-#home h1 {
-  font-size: 3.4rem;
-  line-height: 130%;
-  color: var(--headline);
-
-  margin-bottom: 2.4rem;
-}
-
-#home p {
-  width: 32.7rem;
-  font-size: 1.8rem;
-  line-height: 150%;
-  color: var(--paragraph);
-
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3.2rem;
-}
-
-#home button {
-  background: var(--primary-color);
-  width: 26.3rem;
-  height: 5.2rem;
-
-  border-radius: 4rem;
-  border: none;
-
-  color: #fff;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-
-  /* trabalha com as caixas de dentro */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* espaço entre os elementos */
-  gap: 1.6rem;
-  /* o flex tem o mesmo comportamento do block para os elementos fora */
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 6rem;
-}
-
-#home img {
-  width: 26.4rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  /* para posicionar a imagem um pouco para baixo, mexendo apenas o eixo do objeto dentro da "caixa" */
-  /* objetct-position: 0 2rem */
-
-  /* filter: drop-shadow(0px -3px 3px var(--primary-color)); */
-}
-
-#home .div-stats {
-  width: 32.7rem;
-  /* height: 47rem; */
-
-  background: var(--brand-beige);
-  /* 
-  margin-left: auto;
-  margin-right: auto; */
-  /* pode ser substituido por margin-inline = atua sobre o eixo X */
-  margin-inline: auto;
-
-  /* para nao colocar o height */
-  /* block = atua sobre o eixo Y */
-  padding-block: 4rem;
-
-  border-radius: 0.6rem;
-  border: 1px solid var(--brand-green-light);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* align-items: center; */
-
-  /* aplica separação nos elementos - 60px */
-  gap: 6rem;
-}
-
-#home .stat p {
-  font-size: 1.6rem;
-  line-height: 150%;
-  color: var(--primary-color);
-
-  margin: 0;
-}
-
-#home .stat h3 {
-  font-size: 4.8rem;
-  line-height: 130%;
-  color: var(--headline);
-  margin-bottom: 0.4rem;
-}
-
 /*  ==================================================NAVIGATION==================== */
 
 /* 1º versao NAV */
@@ -394,6 +257,143 @@ body.menu-expanded .logo path {
 }
 body.menu-expanded button path {
   stroke: #fff;
+}
+
+/*  ==================================================HEADER - HOME ==================== */
+/* ------------------- aula 2 ---------------- */
+/* para fazer o backgroud atras do header ate a metade dos stats, conforme figma */
+#home::before {
+  content: '';
+  /* 100vw pega toda largura da viewport da pagina */
+  width: 100%;
+  /* calc para manter a proporçao msmo com o fixed Nav sobreposto */
+  height: calc(108rem + var(--nav-height));
+  background-color: var(--brand-green-light);
+  /* para o elemento aparecer, ele precisa ter um display */
+  display: block;
+
+  /* elemento colado nas extremidades da viewport */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* z-index: 0   - padrao de todo elemento */
+  z-index: -1;
+}
+/* ------------------------------------------- */
+
+#home {
+  /* height: 108rem; */
+  /* calc faz a soma do margin-top 4.1 com o height do nav, ja que agora ele esta fixed e sobreposto aos elementos */
+  /* margin-top: calc(4.1rem + var(--nav-height)); */
+  padding-top: calc(4.1rem + var(--nav-height));
+}
+
+#home h4 {
+  font-size: 1.4rem;
+  line-height: 150%;
+
+  margin-top: 4.1rem;
+  margin-bottom: 1.6rem;
+
+  color: var(--primary-color);
+}
+
+#home h1 {
+  font-size: 3.4rem;
+  line-height: 130%;
+  color: var(--headline);
+
+  margin-bottom: 2.4rem;
+}
+
+#home p {
+  width: 32.7rem;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--paragraph);
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.2rem;
+}
+
+#home button {
+  background: var(--primary-color);
+  width: 26.3rem;
+  height: 5.2rem;
+
+  border-radius: 4rem;
+  border: none;
+
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  /* trabalha com as caixas de dentro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* espaço entre os elementos */
+  gap: 1.6rem;
+  /* o flex tem o mesmo comportamento do block para os elementos fora */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6rem;
+}
+
+#home img {
+  width: 26.4rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* para posicionar a imagem um pouco para baixo, mexendo apenas o eixo do objeto dentro da "caixa" */
+  /* objetct-position: 0 2rem */
+
+  /* filter: drop-shadow(0px -3px 3px var(--primary-color)); */
+}
+
+#home .div-stats {
+  width: 32.7rem;
+  /* height: 47rem; */
+
+  background: var(--brand-beige);
+  /* 
+  margin-left: auto;
+  margin-right: auto; */
+  /* pode ser substituido por margin-inline = atua sobre o eixo X */
+  margin-inline: auto;
+
+  /* para nao colocar o height */
+  /* block = atua sobre o eixo Y */
+  padding-block: 4rem;
+
+  border-radius: 0.6rem;
+  border: 1px solid var(--brand-green-light);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+
+  /* aplica separação nos elementos - 60px */
+  gap: 6rem;
+}
+
+#home .stat p {
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--primary-color);
+
+  margin: 0;
+}
+
+#home .stat h3 {
+  font-size: 4.8rem;
+  line-height: 130%;
+  color: var(--headline);
+  margin-bottom: 0.4rem;
 }
 
 /*  ======================SERVIÇOS==================== */
