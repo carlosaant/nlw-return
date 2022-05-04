@@ -240,9 +240,13 @@ nav {
   /* fixar o menu, para qndo scroll */
   position: fixed;
   top: 0;
-  left: 50%;
+
+  /* left: 50%;
   /* deslocar apenas a metade do tamanho do elemento, para centralizar */
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
+
+  /* esse width estava no nav.scroll e estava limitado ao tamanho nav, agora no wrapper ele preenche automatico e centraliza  */
+  width: 100vw;
 
   /* subir 100 camadas, para ficar por cima, por conta do scrollreveal, que estava sobrepondo */
   z-index: 100;
@@ -257,10 +261,10 @@ nav .wrapper {
 nav.scroll {
   background-color: var(--primary-color);
   /* qndo scroll vai pegar toda a largura da viewport */
-  width: 100vw;
 }
 
-nav.scroll svg:nth-child(1) path {
+/* svg:nth-child(1) */
+nav.scroll .logo path {
   fill: #fff;
 }
 nav.scroll button path {
@@ -283,7 +287,8 @@ body.menu-expanded {
 /* > seleciona todos elementos do primeiro nivel, :not(nav) = menos elemento Nav */
 /* sumir com todos os elementos abaixo de nav (header, etc..) */
 body.menu-expanded > :not(nav) {
-  display: none;
+  /* display: none; --- remove os elementos como se nao existissem*/
+  visibility: hidden;
 }
 
 /* quando body nao tiver a classe menu.expanded */
@@ -324,9 +329,9 @@ body.menu-expanded .menu {
 }
 
 /* nav tambem possui o position fixed, entao nesse caso usa o relative para "tirar" o posicionamento fixed do nav*/
-body.menu-expanded nav {
+/* body.menu-expanded nav {
   position: relative;
-}
+} */
 
 /* aplica somente ao primeiro UL para nao mudar o display dos social links */
 .menu ul:nth-child(1) {
