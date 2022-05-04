@@ -17,3 +17,11 @@ function closeMenu() {
   // adiciona no body a class CSS menu-expanded
   document.body.classList.remove('menu-expanded');
 }
+
+// arrumar sobreposiçao elementos no html css, e o tamanho
+// configurar objeto para a função
+ScrollReveal({
+  origin: 'top', //vai se originar do topo para baixo, de cima para baixo
+  distance: '30px',
+  duration: 500
+}).reveal('#home');
