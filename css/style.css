@@ -78,8 +78,11 @@ section {
 
 section header h4 {
   font-size: 1.4rem;
+  font-weight: 700;
   line-height: 150%;
   margin-bottom: 1.6rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
 
   color: var(--primary-color);
 }
@@ -98,6 +101,14 @@ section header h1 {
 
   /* nesse projeto apenas nesse h1 usa o magin-bottom, mas em outros usar separado */
   margin-bottom: 2.4rem;
+}
+
+section .content p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+
+  color: var(--paragraph);
 }
 
 /*  ==================================================NAVIGATION==================== */
@@ -472,6 +483,13 @@ body.menu-expanded button path {
 
 /*  ======================ABOUT/SOBRE==================== */
 
+#about {
+  text-align: left;
+  background-color: var(--brand-beige);
+}
+
 #about header h2 {
   margin-bottom: 2.4rem;
 }
+
+/* criado padrao para p no GERAL /\ */
