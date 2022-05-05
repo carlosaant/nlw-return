@@ -117,6 +117,37 @@ section .content p {
   color: var(--paragraph);
 }
 
+.button {
+  background: var(--primary-color);
+  /* utilizando essas propriedades fica limitado largura e altura, caso seja mais texto ficará quebrado
+  entao seria melhor utilizar padding para preenchimento dos espaços, de acordo */
+  /* width: 26.3rem;
+     height: 6.2rem; */
+  padding: 1.6rem 3.2rem;
+  /* qndo fica esticado alem */
+  /* quando usa o display flex, para os conteudos internos, por fora ele entende que é Block,
+  assim ele pega 100% do espaço que ele esta, nesse caso definido no .wrapper*/
+  /* ------- usa o fit-content, que vai se adaptar ao conteudo, e nao a caixa a fora, a largura fica adaptada ao
+  conteudo */
+  width: fit-content;
+
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  /* trabalha com as caixas de dentro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+
+  border-radius: 4rem;
+  border: none;
+  margin-bottom: 6rem;
+}
+
 /*  ==================================================NAVIGATION==================== */
 
 /* 1º versao NAV */
@@ -360,7 +391,8 @@ body.menu-expanded button path {
   margin-bottom: 3.2rem;
 }
 
-#home button {
+/* criada classe geral .button com as propriedades para usar em ambos button da pagina */
+/* #home button {
   background: var(--primary-color);
   width: 26.3rem;
   height: 5.2rem;
@@ -373,15 +405,19 @@ body.menu-expanded button path {
   text-transform: uppercase;
 
   /* trabalha com as caixas de dentro */
-  display: flex;
+/* display: flex;
   justify-content: center;
-  align-items: center;
-  /* espaço entre os elementos */
-  gap: 1.6rem;
-  /* o flex tem o mesmo comportamento do block para os elementos fora */
+  align-items: center; */
+/* espaço entre os elementos */
+/* gap: 1.6rem; */
+/* o flex tem o mesmo comportamento do block para os elementos fora */
+/* margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6rem; */
+/* } */
+#home .button {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 6rem;
 }
 
 #home img {
