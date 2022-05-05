@@ -30,4 +30,7 @@ ScrollReveal({
 #home .stats,
 #services,
 #services header,
-#services card`); //sequencia qual aparece primeiro
+#services card,
+#about,
+#about header,
+#about .content`); //sequencia qual aparece primeiro
