@@ -69,6 +69,12 @@ ul {
   list-style: none;
 }
 
+/* padrao para imagems no projeto */
+img {
+  /* vai sempre respeitar 100% a caixa que ela esta */
+  max-width: 100%;
+}
+
 /* todo Section, por definiçao (conforme figma) tem um espaço TOP e Bottom de 100px, um padding - para os elementos */
 section {
   /* ou padding-block */
@@ -493,3 +499,8 @@ body.menu-expanded button path {
 }
 
 /* criado padrao para p no GERAL /\ */
+
+#about .content p {
+  margin-top: 2.4rem;
+  margin-bottom: 6rem;
+}
