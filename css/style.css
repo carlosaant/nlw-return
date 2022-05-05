@@ -76,6 +76,30 @@ section {
   padding-bottom: 10rem;
 }
 
+section header h4 {
+  font-size: 1.4rem;
+  line-height: 150%;
+  margin-bottom: 1.6rem;
+
+  color: var(--primary-color);
+}
+
+section header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+
+  color: var(--headline);
+}
+
+section header h1 {
+  font-size: 3.4rem;
+  line-height: 130%;
+  color: var(--headline);
+
+  /* nesse projeto apenas nesse h1 usa o magin-bottom, mas em outros usar separado */
+  margin-bottom: 2.4rem;
+}
+
 /*  ==================================================NAVIGATION==================== */
 
 /* 1º versao NAV */
@@ -289,7 +313,8 @@ body.menu-expanded button path {
   padding-top: calc(4.1rem + var(--nav-height));
 }
 
-#home h4 {
+/* padronizado foi definido no section header h4 e h1*/
+/* #home h4 {
   font-size: 1.4rem;
   line-height: 150%;
 
@@ -297,15 +322,15 @@ body.menu-expanded button path {
   margin-bottom: 1.6rem;
 
   color: var(--primary-color);
-}
+} */
 
-#home h1 {
+/* #home h1 {
   font-size: 3.4rem;
   line-height: 130%;
   color: var(--headline);
 
   margin-bottom: 2.4rem;
-}
+} */
 
 #home p {
   width: 32.7rem;
@@ -398,26 +423,22 @@ body.menu-expanded button path {
 
 /*  ======================SERVIÇOS==================== */
 
+/* padronizado foi defindo do section header h2 e h4 */
+
 /* section services referenciado pelo ID acessando as tags */
-#services header h4 {
+/* #services header h4 {
   font-size: 1.4rem;
   line-height: 150%;
 
   color: var(--primary-color);
 
   letter-spacing: 0.08rem;
-  text-transform: uppercase;
+  text-transform: uppercase; */
 
-  /* margin entre os elementos conforme figma */
-  margin-bottom: 1.6rem;
-}
-
+/* margin entre os elementos conforme figma */
+/* margin-bottom: 1.6rem;
+} */
 #services header h2 {
-  font-size: 3rem;
-  line-height: 3.9rem;
-
-  color: var(--headline);
-
   margin-bottom: 6rem;
 }
 
@@ -447,4 +468,10 @@ body.menu-expanded button path {
   /* ou margin-block */
   margin-top: 1.3rem;
   margin-bottom: 1.3rem;
+}
+
+/*  ======================ABOUT/SOBRE==================== */
+
+#about header h2 {
+  margin-bottom: 2.4rem;
 }
