@@ -146,7 +146,7 @@ section .content p {
 
   border-radius: 4rem;
   border: none;
-  margin-bottom: 6rem;
+  /* margin-bottom: 6rem; */
 
   /* transition para quando houver o :hover*/
   transition: background 200ms;
@@ -426,6 +426,7 @@ body.menu-expanded button path {
 #home .button {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 6rem;
 }
 
 #home img {
@@ -566,6 +567,9 @@ body.menu-expanded button path {
   flex-direction: column;
   /* gap para separar os elementos, espaçamento */
   gap: 1.6rem;
+
+  /* margin bottom para o button */
+  margin-bottom: 3.2rem;
 }
 
 #contact ul li {
@@ -573,4 +577,8 @@ body.menu-expanded button path {
   align-items: center;
   /* gap espaçamento da imagem ate o item */
   gap: 0.8rem;
+}
+
+#contact .button {
+  margin-bottom: 6rem;
 }
