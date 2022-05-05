@@ -22,6 +22,7 @@
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97%);
   --brand-green-light: hsl(148, 23%, 89%);
+  --brand-green-hover: hsl(170, 100%, 14%);
 
   /* vai ser aplicado a todo body */
   --brand-green-light2: hsl(180, 14%, 97%);
@@ -146,6 +147,13 @@ section .content p {
   border-radius: 4rem;
   border: none;
   margin-bottom: 6rem;
+
+  /* transition para quando houver o :hover*/
+  transition: background 200ms;
+}
+
+.button:hover {
+  background-color: var(--brand-green-hover);
 }
 
 /*  ==================================================NAVIGATION==================== */
