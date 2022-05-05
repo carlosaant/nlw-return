@@ -392,6 +392,7 @@ body.menu-expanded button path {
 
   /* para posicionar a imagem um pouco para baixo, mexendo apenas o eixo do objeto dentro da "caixa" */
   /* objetct-position: 0 2rem */
+  object-position: 0px 2rem;
 
   /* filter: drop-shadow(0px -3px 3px var(--primary-color)); */
 }
@@ -504,3 +505,5 @@ body.menu-expanded button path {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
 }
+
+/*  ======================CONTACT/CONTATO==================== */
