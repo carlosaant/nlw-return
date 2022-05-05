@@ -507,3 +507,26 @@ body.menu-expanded button path {
 }
 
 /*  ======================CONTACT/CONTATO==================== */
+
+/* alinhamento left conforme figma, de todo conteudo */
+#contact {
+  text-align: left;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  /* gap para separar os elementos, espaçamento */
+  gap: 1.6rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  /* gap espaçamento da imagem ate o item */
+  gap: 0.8rem;
+}
