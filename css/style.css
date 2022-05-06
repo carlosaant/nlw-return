@@ -582,3 +582,50 @@ body.menu-expanded button path {
 #contact .button {
   margin-bottom: 6rem;
 }
+
+/*  ======================CONTACT/CONTATO==================== */
+
+footer {
+  background-color: var(--primary-color);
+
+  /* padding top e bottom */
+  padding-block: 6rem;
+
+  text-align: left;
+  color: #fff;
+}
+
+/* o .logo possui display inline e portanto, nao aceita margin-top e bottom, nao aceita width e height.
+assim é preciso transformar em inline-block*/
+footer .logo {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+/* aumentar o tamanho da logo/svg */
+/* conforme figma */
+footer .logo svg {
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+/* alterar todo path do SVG para branco, caso fosse imagem, precisaria substituir diretamente a mesma */
+footer .logo path {
+  fill: #fff;
+}
+
+/*  */
+footer p {
+  color: var(--brand-beige);
+
+  /* como os textos estao em um unico P, e para dar o espaçamento entre eles (conforme figma), se usa o line-height */
+  /* altura */
+  line-height: 2;
+
+  margin-bottom: 3.2rem;
+}
+
+/* esta definido como justify-content center no Nav/Menu como Geral, entao aqui se usa para flex-start conforme figma */
+footer .social-links {
+  justify-content: flex-start;
+}
