@@ -713,3 +713,97 @@ footer .social-links {
 
   transform: translateY(0);
 }
+
+/* =================================================MEDIA / RESPONSIVO============================================= */
+
+/* min: 1024px */
+@media (min-width: 1024px) {
+  /* =======================GERAL==========================*/
+
+  .wrapper {
+    /* conforme figma, como se fosse o .content */
+    width: min(112rem, 100%);
+  }
+
+  /* =======================NAVIGATION==========================*/
+  /* reset */
+
+  /* seletor pegar todos os elementos do nav dentro do #navigation*/
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    /* initial retorna ao estado padrao navegador */
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+    font-weight: initial;
+  }
+
+  /* --------VERSÃO DESKTOP ----------- */
+  nav#navigation .open-menu,
+  nav#navigation .close-menu,
+  nav#navigation .social-links {
+    display: none;
+  }
+
+  nav#navigation .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* com width 60%, a caixa ira ocupar mais espaço, podendo aplicar o justify-content corretamente,
+    antes estava limitada pois os elementos estavam se dividindo dentro do espaço, junto com o .logo */
+    width: 60%;
+  }
+
+  /* se pegar apenas o ul, como foi definido acima para ser display:none, a outra ul(social-links) voltara aparecer,
+  entao nesse caso pega apenas a primeira ul, que são as opçoes do menu - para aplicar espaçamento, transformar em flex */
+  nav#navigation .menu ul:nth-child(1) {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  nav#navigation .menu ul li a {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+
+    color: var(--primary-color);
+
+    opacity: 0.7;
+  }
+
+  nav#navigation .menu a.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem 2.4rem;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 4rem;
+
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    line-break: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  /* ===== scroll === */
+  /* deixar .scroll colado para quando tiver a classe (adiciona via JS ao scroll a pagina) */
+  nav#navigation.scroll .menu ul li a {
+    color: var(--brand-green-light);
+    opacity: 0.6;
+  }
+  nav#navigation.scroll .menu a.button {
+    color: #fff;
+    border-color: #fff;
+  }
+}
