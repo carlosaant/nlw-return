@@ -1,12 +1,35 @@
 let navigation = document.getElementById('navigation');
+let backToTopButton = document.getElementById('backToTopButton');
+
+onload = function () {
+  document.addEventListener('scroll', onScroll);
+};
 
 function onScroll() {
+  showNavOnScroll();
+  showBackToTopButtonOnScroll();
+}
+
+// -----------------
+
+function showNavOnScroll() {
   if (scrollY > 0) {
     navigation.classList.add('scroll');
   } else {
     navigation.classList.remove('scroll');
   }
 }
+
+function showBackToTopButtonOnScroll() {
+  // tamanho da tela pra ativar
+  if (scrollY > 500) {
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+}
+
+// -----------------
 
 function openMenu() {
   // adiciona no body a class CSS menu-expanded
