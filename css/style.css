@@ -66,7 +66,11 @@ body {
 
 /* segue a mesma ideia do .content, para reutilizar em outras sessoes sem ficar repetindo o mesmo conteudo */
 .wrapper {
-  width: 37.5rem;
+  /* modificado para min() */
+  /* width: 37.5rem; */
+
+  /* assim fica definido que o tamanho maximo sera de 50rem=500px, se ficar menor que 50rem, ira ocupar entao 100% */
+  width: min(50rem, 100%);
   margin-left: auto;
   margin-right: auto;
 
@@ -257,6 +261,11 @@ nav button {
   cursor: pointer;
 }
 
+nav .menu,
+nav .close-menu {
+  position: fixed;
+}
+
 /*  ======================NAVIGATION MENU EXPANDED==================== */
 
 /* quando transbordar as laterias para nao aparecer as barras de rolagem */
@@ -292,7 +301,7 @@ body.menu-expanded .close-menu {
 }
 
 body.menu-expanded .menu {
-  position: fixed;
+  /* position: fixed; - nao mais necessario aqui, foi criado classe nav .menu - stage05*/
   top: 0;
   left: 0;
   background-color: var(--primary-color);
@@ -434,7 +443,6 @@ body.menu-expanded button path {
 } */
 
 #home p {
-  width: 32.7rem;
   font-size: 1.8rem;
   line-height: 150%;
   color: var(--paragraph);
@@ -488,8 +496,9 @@ body.menu-expanded button path {
 }
 
 #home .div-stats {
-  width: 32.7rem;
+  /* width: 32.7rem; */
   /* height: 47rem; */
+  width: 100%;
 
   background: var(--brand-beige);
   /* 
