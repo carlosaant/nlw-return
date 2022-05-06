@@ -629,3 +629,21 @@ footer p {
 footer .social-links {
   justify-content: flex-start;
 }
+
+/*  ======================BUTTON/BACK TO TOP==================== */
+
+/* inicia invisivel, so aparece qndo o scroll ativar - esta fixo na lateral direita */
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* quando ele estiver com a classe .show */
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+}
