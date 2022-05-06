@@ -180,7 +180,8 @@ section .content p {
 #navigation .logo svg path[fill*='#00856F'] {
   fill: var(--primary-color);
 }
-/* quando receber o scroll - ao scroll a pagina */
+/* quando receber o scroll - ao scroll a pagina e o menu estiver aberto*/
+body.menu-expanded #navigation .logo svg path,
 #navigation.scroll .logo svg path[fill*='#00856F'] {
   fill: #fff;
 }
