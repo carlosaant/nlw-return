@@ -2,7 +2,11 @@ let navigation = document.getElementById('navigation');
 let backToTopButton = document.getElementById('backToTopButton');
 
 onload = function () {
+  // ou window.add....
   document.addEventListener('scroll', onScroll);
+
+  // ao iniciar executar uma vez o onScroll() para inserir a funçao caso seja digitado a pagina diretamente ao meio da pagina sem ter dado scroll, pois o scroll ja vai estar >0
+  onScroll();
 };
 
 function onScroll() {
