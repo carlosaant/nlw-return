@@ -723,6 +723,8 @@ footer .social-links {
   .wrapper {
     /* conforme figma, como se fosse o .content */
     width: min(112rem, 100%);
+
+    display: grid;
   }
 
   /* =======================NAVIGATION==========================*/
@@ -866,5 +868,44 @@ footer .social-links {
 
   nav#navigation .menu ul li a:hover {
     opacity: 1;
+  }
+
+  /* =======================HOME==========================*/
+
+  /* o Flex so trabalha em linha ou em coluna, com o Grid se pode posionar os elementos, definir o layout, no caso esse projeto pelo figma utiliza uma separaçao em 2 colunas seus conteudos em cada section(com exceção) */
+  #home .wrapper {
+    grid-template-columns: 60.5rem 1fr;
+
+    /* area onde vai deixar cada elemento, colunas e linha*/
+    grid-template-areas:
+      'A B'
+      'C C';
+  }
+
+  #home .col-a {
+    /* vai ocupar a Coluna A */
+    grid-area: A;
+
+    text-align: left;
+  }
+  #home .col-b {
+    /* vai ocupar a Coluna B */
+    grid-area: B;
+  }
+  #home .div-stats {
+    /* vai ocupar as Colunas C */
+    grid-area: C;
+
+    /* ja possui display flex em colum, entao muda para row */
+    flex-direction: row;
+  }
+
+  /* ---- */
+
+  #home .button {
+    margin: 0;
+  }
+  #home img {
+    width: 42rem;
   }
 }
