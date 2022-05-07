@@ -492,7 +492,7 @@ body.menu-expanded button path {
   /* objetct-position: 0 2rem */
   object-position: 0px 2rem;
 
-  /* filter: drop-shadow(0px -3px 3px var(--primary-color)); */
+  filter: drop-shadow(0px -3px 5px var(--primary-color));
 }
 
 #home .div-stats {
@@ -892,20 +892,45 @@ footer .social-links {
     /* vai ocupar a Coluna B */
     grid-area: B;
   }
-  #home .div-stats {
-    /* vai ocupar as Colunas C */
-    grid-area: C;
-
-    /* ja possui display flex em colum, entao muda para row */
-    flex-direction: row;
-  }
 
   /* ---- */
+
+  #home h1 {
+    font-size: 5.2rem;
+  }
+
+  #home .content p {
+    font-size: 1.8rem;
+  }
 
   #home .button {
     margin: 0;
   }
   #home img {
     width: 42rem;
+  }
+
+  #home .div-stats {
+    /* vai ocupar as Colunas C */
+    grid-area: C;
+
+    /* ja possui display flex em colum, entao muda para row */
+    flex-direction: row;
+    padding: 6rem;
+
+    /* remover o gap/espaçamento que estava na versao mobile */
+    gap: 0;
+  }
+
+  /* seletor para pegar um .stat que tenha um .stat anterior,no caso o segundo e o terceiro, para adicionar as bordas na lateral(efeito de separação) 
+  no caso o primeiro nao seleciona ninguem, pois nao tem ninguem(.stat) antes dele*/
+  #home .div-stats .stat + .stat {
+    border-left: 1px solid var(--primary-color);
+  }
+
+  /* realiza o preenchimento por igual entre os elementos, como definido tamanho */
+  #home .div-stats .stat {
+    /* como .div-stats ja é um flex o 1 significa que ele vai preencher por igual cada elemento, a mesma largura, de acordo com a caixa que eles estao inseridos dentro, no caso a .div-stats*/
+    flex: 1;
   }
 }
