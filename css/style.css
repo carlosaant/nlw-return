@@ -32,7 +32,7 @@
   --brand-green-hover: hsl(var(--hue), 100%, 14%);
 
   /* vai ser aplicado a todo body */
-  --brand-green-light2: hsl(180, 14%, 97%);
+  --brand-green-light2: hsl(calc(var(--hue) + 10), 14%, 97%);
 
   /* height do elemento conforme figma, o mesmo se daria somando padding top e bottom */
   --nav-height: 7.2rem;
@@ -799,11 +799,59 @@ footer .social-links {
   /* ===== scroll === */
   /* deixar .scroll colado para quando tiver a classe (adiciona via JS ao scroll a pagina) */
   nav#navigation.scroll .menu ul li a {
-    color: var(--brand-green-light);
+    color: var(--brand-green-light2);
     opacity: 0.6;
   }
   nav#navigation.scroll .menu a.button {
     color: #fff;
     border-color: #fff;
+  }
+
+  /* transition para opacity ao passar o mouse*/
+  nav#navigation .menu li a {
+    transition: opacity 0.4s;
+  }
+  /* hover ao passar mouse sobre item do menu */
+  nav#navigation .menu li a:hover {
+    opacity: 1;
+    font-weight: 700;
+  }
+
+  /* criar a linha embaixo do item no menu, selecionado etc */
+  nav#navigation .menu li a::after {
+    /* sempre pra criar algo precisa do content */
+    content: '';
+    /* começa como 0 quando passar mouse em cima pega 100% */
+    width: 0%;
+    height: 0.2rem;
+
+    /* relative para poder usar o bottom, e colar o elemento embaixo no caso, negativo para o mover para baxo */
+    position: relative;
+    bottom: -2rem;
+    /* cria um espaço */
+    /* padding-inline: 0.8rem; */
+    /* recua */
+    left: -0.5rem;
+
+    background-color: var(--primary-color);
+    display: block;
+
+    /* animaçao */
+    transition: width 0.2s;
+  }
+
+  /* quando houver o scroll */
+  nav#navigation.scroll .menu li a::after {
+    background-color: #fff;
+  }
+
+  /* quando houver o hover */
+  nav#navigation .menu li a:hover::after {
+    padding-inline: 0.8rem;
+    width: 100%;
+  }
+
+  nav#navigation .menu li a:hover {
+    opacity: 1;
   }
 }
