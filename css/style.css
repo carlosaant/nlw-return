@@ -401,7 +401,8 @@ body.menu-expanded button path {
   /* 100vw pega toda largura da viewport da pagina */
   width: 100%;
   /* calc para manter a proporçao msmo com o fixed Nav sobreposto */
-  height: calc(108rem + var(--nav-height));
+  /* % para melhor adaptçao quando diminuido a tela */
+  height: calc(72% + var(--nav-height));
   background-color: var(--brand-green-light);
   /* para o elemento aparecer, ele precisa ter um display */
   display: block;
@@ -872,6 +873,17 @@ footer .social-links {
 
   /* =======================HOME==========================*/
 
+  /* elemento atras do home/ backgroud */
+  #home::before {
+    /* para ficar ate a metade da div-stat, como no figma */
+    /* % menos o nav-height(aqui 7.2rem) - observado pelo devtools do chrome ql melhor numero chegaria no melhor resultado */
+    height: calc(86% - var(--nav-height));
+  }
+
+  #home {
+    padding-top: var(--nav-height);
+  }
+
   /* o Flex so trabalha em linha ou em coluna, com o Grid se pode posionar os elementos, definir o layout, no caso esse projeto pelo figma utiliza uma separaçao em 2 colunas seus conteudos em cada section(com exceção) */
   #home .wrapper {
     grid-template-columns: 60.5rem 1fr;
@@ -887,6 +899,9 @@ footer .social-links {
     grid-area: A;
 
     text-align: left;
+
+    /* alinha os elemento dentro da caixa que esta, no caso na coluna A */
+    align-self: center;
   }
   #home .col-b {
     /* vai ocupar a Coluna B */
