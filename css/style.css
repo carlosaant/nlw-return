@@ -743,6 +743,7 @@ footer .social-links {
     color: initial;
     background-color: initial;
     font-weight: initial;
+    filter: initial;
   }
 
   /* --------VERSÃO DESKTOP ----------- */
@@ -796,6 +797,12 @@ footer .social-links {
     text-transform: uppercase;
   }
 
+  nav#navigation .menu a.button:hover {
+    background-color: var(--primary-color);
+    color: var(--brand-green-light2);
+    border: none;
+  }
+
   /* ===== scroll === */
   /* deixar .scroll colado para quando tiver a classe (adiciona via JS ao scroll a pagina) */
   nav#navigation.scroll .menu ul li a {
@@ -806,19 +813,25 @@ footer .social-links {
     color: #fff;
     border-color: #fff;
   }
+  /* button nav ao scroll a pagina */
+  nav#navigation.scroll .menu a.button:hover {
+    background-color: var(--primary-color);
+    filter: brightness(1.3);
+    border: none;
+  }
 
   /* transition para opacity ao passar o mouse*/
-  nav#navigation .menu li a {
+  nav#navigation .menu ul li a {
     transition: opacity 0.4s;
   }
   /* hover ao passar mouse sobre item do menu */
-  nav#navigation .menu li a:hover {
+  nav#navigation .menu ul li a:hover {
     opacity: 1;
     font-weight: 700;
   }
 
   /* criar a linha embaixo do item no menu, selecionado etc */
-  nav#navigation .menu li a::after {
+  nav#navigation .menu ul li a::after {
     /* sempre pra criar algo precisa do content */
     content: '';
     /* começa como 0 quando passar mouse em cima pega 100% */
@@ -841,17 +854,17 @@ footer .social-links {
   }
 
   /* quando houver o scroll */
-  nav#navigation.scroll .menu li a::after {
+  nav#navigation.scroll .menu ul li a::after {
     background-color: #fff;
   }
 
   /* quando houver o hover */
-  nav#navigation .menu li a:hover::after {
+  nav#navigation .menu ul li a:hover::after {
     padding-inline: 0.8rem;
     width: 100%;
   }
 
-  nav#navigation .menu li a:hover {
+  nav#navigation .menu ul li a:hover {
     opacity: 1;
   }
 }
