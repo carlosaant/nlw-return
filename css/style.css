@@ -402,7 +402,7 @@ body.menu-expanded button path {
   width: 100%;
   /* calc para manter a proporçao msmo com o fixed Nav sobreposto */
   /* % para melhor adaptçao quando diminuido a tela */
-  height: calc(72% + var(--nav-height));
+  height: calc(76% + var(--nav-height));
   background-color: var(--brand-green-light);
   /* para o elemento aparecer, ele precisa ter um display */
   display: block;
@@ -418,6 +418,9 @@ body.menu-expanded button path {
 /* ------------------------------------------- */
 
 #home {
+  /* versao desktop ::- todas as sessoes estavam recebendo padding-bloc 10rem, mas o #home nao pode receber */
+  padding-block: 0;
+  /* ------------ */
   /* height: 108rem; */
   /* calc faz a soma do margin-top 4.1 com o height do nav, ja que agora ele esta fixed e sobreposto aos elementos */
   /* margin-top: calc(4.1rem + var(--nav-height)); */
@@ -720,12 +723,22 @@ footer .social-links {
 /* min: 1024px */
 @media (min-width: 1024px) {
   /* =======================GERAL==========================*/
+  body {
+    /* remover a sobreposiçao do scroll na pagina, espaço.. */
+    /* o "auto" vai fazer a barra do scroll contar como tamanho da pagina tambem, e não a partir dele */
+    overflow: auto;
+  }
 
   .wrapper {
     /* conforme figma, como se fosse o .content */
     width: min(112rem, 100%);
 
     display: grid;
+  }
+
+  section {
+    /* padding top e bottom */
+    padding-block: 16rem;
   }
 
   /* =======================NAVIGATION==========================*/
@@ -877,7 +890,7 @@ footer .social-links {
   #home::before {
     /* para ficar ate a metade da div-stat, como no figma */
     /* % menos o nav-height(aqui 7.2rem) - observado pelo devtools do chrome ql melhor numero chegaria no melhor resultado */
-    height: calc(86% - var(--nav-height));
+    height: calc(95% - var(--nav-height));
   }
 
   #home {
