@@ -12,9 +12,67 @@ onload = function () {
 function onScroll() {
   showNavOnScroll();
   showBackToTopButtonOnScroll();
+
+  activateMenuAtCurrentSection(home);
+  activateMenuAtCurrentSection(services);
+  activateMenuAtCurrentSection(about);
+  activateMenuAtCurrentSection(contact);
 }
 
 // -----------------
+
+// colocar selecionado/activate no menu qndo estiver em section X
+// a logica se da, imaginando uma linha imaginaria cortando o meio da pagina, e quando uma topo de um section estiver pasando por essa linha e parte debaixo abaixo da linha, atraves do posicionamento do scrollbar (scrollY), e a porção de altura da pagina(innerHeight) dividingo ao meio tera a metade da altura da tela.  para ter a visao de onde esta na linha imaginaria: scrollY + innerHeight/2 e verificar qual section o Scroll ta passando.
+function activateMenuAtCurrentSection(section) {
+  const targetLine = scrollY + innerHeight / 2;
+
+  // ---- verificar se a section passou da linha
+  // quais dados vou precisar?
+
+  // offsetTop retorna o topo da section
+  const sectionTop = section.offsetTop;
+  // offsetHeight retorna a altura da section
+  const sectionHeight = section.offsetHeight;
+
+  // o topo da section chegou ou ultrapassou a linha alvo
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop;
+
+  // informaçoes dos dados e da logica
+  console.log(
+    'O topo da section chegou ou passou da linha alvo(imaginaria)?',
+    sectionTopReachOrPassedTargetLine
+  );
+
+  // ---- verificar se a base esta abaixo da linha alvo
+  // quais dados vou precisar?
+
+  // a section termina onde? - a base de fato, não so onde a section termina
+  const sectionEndsAt = sectionTop + sectionHeight;
+
+  // o final da section passou da linha alvo
+  const sectionEndPassedTargetLine = sectionEndsAt <= targetLine;
+
+  console.log(
+    'O final da section passou da linha alvo(imaginaria)?',
+    sectionEndPassedTargetLine
+  );
+
+  // --- limites da section
+  const sectionBoundaries =
+    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine; //negando pois ambos precisam ser true para a section estar dentro da linha alvo
+
+  // pegar elemento do menu para poder adicionar a classe active
+  const sectionId = section.getAttribute('id');
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}`);
+
+  // sempre começa removendo, pois vai adicionar caso seja True
+  menuElement.classList.remove('active');
+  if (sectionBoundaries) {
+    menuElement.classList.add('active');
+    //
+    console.log('Estou na section: ', section);
+  }
+}
 
 function showNavOnScroll() {
   if (scrollY > 0) {
