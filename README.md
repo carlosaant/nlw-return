@@ -1,16 +1,16 @@
 # DoctorCare - NLW #8 Return
 
-conteúdo do Evento Rocketseat NLW #8 Return, onde é criado uma Pagina de captura atendendo aos padrões de acessibilidade e utilizando a tecnica Modelo Mobile First, customizando o CSS com animações, e utilizando Lib JavaScript para interatividade.
+Conteúdo do Evento Rocketseat NLW #8 Return, onde é criado uma Pagina de captura atendendo aos padrões de acessibilidade e utilizando a tecnica Modelo Mobile First, customizando o CSS com animações, e utilizando Lib JavaScript para interatividade.
 
 ### Etapas do Projeto
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
+O projeto foi concluido e as atualizações executadas de acordo com as seguintes tarefas:
 
 - [x] Stage 01 - Criar Projeto, definir estrutura e criar Header
 - [x] Stage 02 - Criar Menu Nav, e Menu nav Extended
 - [x] Stage 03 - Reestruturar o projeto por Sections, Criar Serviços e Sobre nós, inserir animações CSS e JS ScrollReveal
 - [x] Stage 04 - Criar Section Contato, e Footer, Criar um botão pra voltar ao topo da página e Customizar o site com cores personalizadas
-- [ ] Stage 05
+- [x] Stage 05 - Criar versão Desktop do Projeto, restruturar o HTML/CSS utilizando Grid na versão Desktop, criar função JS para deixar o menu com estado "active" entre as sections que estao na tela conforme rolagem.
 
 ## 💻 Visualização do Projeto
 
@@ -25,3 +25,14 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 - Stage 04
   ![contact-footer](https://user-images.githubusercontent.com/42329793/167143977-50f1852a-81ca-4c7c-9eba-a23c49b77583.png)
+
+- Stage 05
+  ![1](https://user-images.githubusercontent.com/42329793/167312544-05dd39cd-c271-4673-8503-096640b7edec.png)
+
+## 🚀 Acessando <DoctorCare>
+
+Acesse o Projeto [DoctorCare - NLW](https://carlosaant.github.io/nlw-return/)
+
+## 📝 Autor
+
+[Antonio Carlos](https://github.com/carlosaant)
