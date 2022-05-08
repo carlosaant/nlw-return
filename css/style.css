@@ -722,7 +722,7 @@ footer .social-links {
 
 /* min: 1024px */
 @media (min-width: 1024px) {
-  /* =======================GERAL==========================*/
+  /* =======================GERAL  / padroes ==========================*/
   body {
     /* remover a sobreposiçao do scroll na pagina, espaço.. */
     /* o "auto" vai fazer a barra do scroll contar como tamanho da pagina tambem, e não a partir dele */
@@ -739,6 +739,11 @@ footer .social-links {
   section {
     /* padding top e bottom */
     padding-block: 16rem;
+  }
+
+  section h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
   }
 
   /* =======================NAVIGATION==========================*/
@@ -961,4 +966,28 @@ footer .social-links {
     /* como .div-stats ja é um flex o 1 significa que ele vai preencher por igual cada elemento, a mesma largura, de acordo com a caixa que eles estao inseridos dentro, no caso a .div-stats*/
     flex: 1;
   }
+
+  /* =======================SERVICES==========================*/
+
+  #services h2 {
+    width: 47rem;
+    margin-inline: auto;
+  }
+
+  #services .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* /\ voltou a ficar um embaixo do outro, entao precisa alterar o tamanho do card= #services .cards .card */
+
+    /* espaçamento entre cada .card */
+    gap: 4rem;
+  }
+
+  #services .cards .card {
+    width: 30%;
+    /* cresce o elemento pra preecher o espaço restante ref. aos 30% de cada um, caso sobre uma margem ou espaço */
+    flex-grow: 1;
+  }
+
+  /* =======================ABOUT==========================*/
 }
