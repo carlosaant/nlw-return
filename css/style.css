@@ -736,6 +736,15 @@ footer .social-links {
     display: grid;
   }
 
+  .col-b {
+    /* vai ocupar a Coluna A */
+    grid-area: A;
+  }
+  .col-b {
+    /* vai ocupar a Coluna B */
+    grid-area: B;
+  }
+
   section {
     /* padding top e bottom */
     padding-block: 16rem;
@@ -914,17 +923,20 @@ footer .social-links {
 
   #home .col-a {
     /* vai ocupar a Coluna A */
-    grid-area: A;
+    /* grid-area: A; */
+    /* movido para Geral */
 
     text-align: left;
 
     /* alinha os elemento dentro da caixa que esta, no caso na coluna A */
     align-self: center;
   }
-  #home .col-b {
+
+  /* feito classe geral */
+  /* #home .col-b {
     /* vai ocupar a Coluna B */
-    grid-area: B;
-  }
+  /* grid-area: B; */
+  /* } */
 
   /* ---- */
 
@@ -990,4 +1002,21 @@ footer .social-links {
   }
 
   /* =======================ABOUT==========================*/
+
+  #about .wrapper {
+    /* define a grid */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'B A';
+
+    /* espaçamento entre os elementos */
+    gap: 6.7rem;
+  }
+
+  #about .col-a {
+    align-self: center;
+  }
+
+  #about .content p {
+    margin-bottom: 0;
+  }
 }
