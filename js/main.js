@@ -1,9 +1,11 @@
 let navigation = document.getElementById('navigation');
 let backToTopButton = document.getElementById('backToTopButton');
+let checkDarkMode = document.getElementById('checkDarkMode');
 
 onload = function () {
   // ou window.add....
   document.addEventListener('scroll', onScroll);
+  checkDarkMode.addEventListener('change', checkDarkModeHasChecked);
 
   // ao iniciar executar uma vez o onScroll() para inserir a funçao caso seja digitado a pagina diretamente ao meio da pagina sem ter dado scroll, pois o scroll ja vai estar >0
   onScroll();
@@ -17,6 +19,14 @@ function onScroll() {
   activateMenuAtCurrentSection(services);
   activateMenuAtCurrentSection(about);
   activateMenuAtCurrentSection(contact);
+}
+
+function checkDarkModeHasChecked() {
+  if (this.checked) {
+    console.log('Checkbox foi marcado');
+  } else {
+    console.log('Checkbox foi desmarcado');
+  }
 }
 
 // -----------------
