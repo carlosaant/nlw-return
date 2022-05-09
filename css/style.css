@@ -38,6 +38,10 @@
   --nav-height: 7.2rem;
 }
 
+.dark-mode:root {
+  --primary-color-dm: black;
+}
+
 html {
   /* scroll suave */
   scroll-behavior: smooth;
