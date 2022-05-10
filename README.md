@@ -17,7 +17,7 @@ O projeto foi concluido e as atualizações executadas de acordo com as seguinte
 Com base no projeto realizado conforme #nlw, e estudos, foram realizadas a parte os seguintes ajustes e melhorias:
 
 - [x] DarkMode, opçao para a pagina ficar mais confortavel aos olhos, em versão Mobile e Desktop
-- [ ] Sessão de comentários sobre o tema do projeto em si
+- [ ] Sessão de depoimentos sobre o tema do projeto em si
 - [ ] Formulario para contato direto
 - [ ] Sessão Mapa com localizaçao do endereço (ficticio) sobre o tema do projeto
 
