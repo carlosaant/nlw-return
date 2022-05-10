@@ -730,7 +730,30 @@ body.menu-expanded button path {
   margin-bottom: 6rem;
 }
 
-/*  ======================CONTACT/CONTATO==================== */
+/* ------formulario contato ------- */
+#contact .div-formContato {
+  width: 100%;
+  background-color: var(--brand-green-light);
+  border-radius: 10px;
+}
+
+#contact .div-formContato form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#contact .div-formContato form textarea,
+#contact .div-formContato form input {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.2rem;
+  padding: 1.6rem;
+  background-color: var(--brand-green-light2);
+  border: 1px solid var(--primary-color);
+  border-radius: 0.6rem;
+}
+
+/*  ======================FOOTER==================== */
 
 footer {
   background-color: var(--primary-color);
