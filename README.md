@@ -18,7 +18,7 @@ Com base no projeto realizado conforme #nlw, e estudos, foram realizadas a parte
 
 - [x] DarkMode, opçao para a pagina ficar mais confortavel aos olhos, em versão Mobile e Desktop
 - [ ] Sessão de depoimentos sobre o tema do projeto em si
-- [ ] Formulario para contato direto
+- [x] Formulario para contato direto na sessão de Contact
 - [ ] Sessão Mapa com localizaçao do endereço (ficticio) sobre o tema do projeto
 
 ## 💻 Visualização do Projeto
