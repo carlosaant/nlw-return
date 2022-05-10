@@ -990,6 +990,15 @@ footer .social-links {
     opacity: 1;
   }
 
+  /* switch .slider com scroll */
+  nav#navigation.scroll .menu .slider {
+    background-color: #fff;
+  }
+  nav#navigation.scroll .menu .slider:before {
+    background-color: var(--primary-color);
+    background-image: url('../assets/darkmode-scroll-inativo-24x24.png');
+  }
+
   /* =======================HOME==========================*/
 
   /* elemento atras do home/ backgroud */
