@@ -132,4 +132,5 @@ ScrollReveal({
 #services card,
 #about,
 #about header,
-#about .content`); //sequencia qual aparece primeiro
+#about .content,
+#contact`); //sequencia qual aparece primeiro
