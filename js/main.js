@@ -23,8 +23,10 @@ function onScroll() {
 
 function checkDarkModeHasChecked() {
   if (this.checked) {
+    document.documentElement.classList.add('dark-mode');
     console.log('Checkbox foi marcado');
   } else {
+    document.documentElement.classList.remove('dark-mode');
     console.log('Checkbox foi desmarcado');
   }
 }

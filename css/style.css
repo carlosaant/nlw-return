@@ -39,7 +39,18 @@
 }
 
 .dark-mode:root {
-  --primary-color-dm: black;
+  --hue: 290;
+
+  --primary-color: hsl(var(--hue), 100%, 26%);
+  --headline: hsl(210, 41%, 93%);
+  --paragraph: hsl(0, 0%, 100%);
+  --brand-beige: hsl(0, 2%, 10%);
+
+  --brand-green-light: hsl(0, 0%, 0%);
+  --brand-green-hover: hsl(220, 2%, 30%);
+
+  /* vai ser aplicado a todo body */
+  --brand-green-light2: hsl(0, 0%, 0%);
 }
 
 html {
@@ -364,7 +375,7 @@ body.menu-expanded .menu {
   padding-inline: 3.2rem;
 
   margin-top: 4.8rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 
 .menu .button:hover {
@@ -381,7 +392,75 @@ body.menu-expanded .menu {
   justify-content: center;
   /* espaçamento entre os elementos */
   gap: 3.2rem;
+
+  margin-top: 4rem;
 }
+
+/* =============== The switch - the box around the slider ========*/
+nav#navigation .menu .switch {
+  position: relative;
+
+  display: block;
+  margin-inline: auto;
+
+  width: 6rem;
+  height: 3.4rem;
+}
+
+/* Hide default HTML checkbox */
+nav#navigation .menu .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+nav#navigation .menu .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+
+  transition: 0.4s;
+
+  border-radius: 3.4rem;
+}
+
+nav#navigation .menu .slider:before {
+  position: absolute;
+  content: '';
+  height: 2.6rem;
+  width: 2.6rem;
+  left: 0.4rem;
+  bottom: 0.4rem;
+  background-color: white;
+  background-image: url('../assets/dark-mode-inativo-24x24.png');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+
+  transition: 0.4s;
+
+  border-radius: 50%;
+}
+
+nav#navigation .menu .switch input:checked + .slider {
+  background-color: #ccc;
+}
+
+/* nav#navigation .menu .switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+} */
+
+/* faz o movimento de switch */
+nav#navigation .menu .switch input:checked + .slider:before {
+  transform: translateX(2.6rem);
+}
+
+/* -------------END SWITCH -------------- */
 
 /* precisa colocar a logo e o botao no mesmo nivel do menu-expanded */
 body.menu-expanded .logo,
@@ -583,7 +662,7 @@ body.menu-expanded button path {
   padding: 2.4rem;
   text-align: left;
 
-  background: #ffffff;
+  background: #fff;
 
   border: 1px solid var(--brand-green-light);
   border-radius: 0.6rem;
@@ -837,6 +916,11 @@ footer .social-links {
     border: none;
   }
 
+  /* retira margin switch versao desk */
+  nav#navigation .menu .switch {
+    margin-inline: 0;
+  }
+
   /* ===== scroll === */
   /* deixar .scroll colado para quando tiver a classe (adiciona via JS ao scroll a pagina) */
   nav#navigation.scroll .menu ul li a {
@@ -905,69 +989,6 @@ footer .social-links {
   nav#navigation .menu ul li a:hover {
     opacity: 1;
   }
-
-  /* The switch - the box around the slider */
-  nav#navigation .menu .switch {
-    position: relative;
-    display: inline-block;
-    width: 6rem;
-    height: 3.4rem;
-  }
-
-  /* Hide default HTML checkbox */
-  nav#navigation .menu .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  /* The slider */
-  nav#navigation .menu .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--primary-color);
-
-    transition: 0.4s;
-
-    border-radius: 3.4rem;
-  }
-
-  nav#navigation .menu .slider:before {
-    position: absolute;
-    content: '';
-    height: 2.6rem;
-    width: 2.6rem;
-    left: 0.4rem;
-    bottom: 0.4rem;
-    background-color: white;
-    background-image: url('../assets/dark-mode-inativo-24x24.png');
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: center;
-
-    transition: 0.4s;
-
-    border-radius: 50%;
-  }
-
-  nav#navigation .menu .switch input:checked + .slider {
-    background-color: #ccc;
-  }
-
-  /* nav#navigation .menu .switch input:focus + .slider {
-    box-shadow: 0 0 1px #2196f3;
-  } */
-
-  /* faz o movimento de switch */
-  nav#navigation .menu .switch input:checked + .slider:before {
-    transform: translateX(2.6rem);
-  }
-
-  /* -------------END SWITCH -------------- */
 
   /* =======================HOME==========================*/
 
