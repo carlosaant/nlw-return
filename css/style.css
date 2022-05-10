@@ -422,7 +422,7 @@ nav#navigation .menu .slider {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--primary-color);
+  background-color: #fff;
 
   transition: 0.4s;
 
@@ -436,8 +436,8 @@ nav#navigation .menu .slider:before {
   width: 2.6rem;
   left: 0.4rem;
   bottom: 0.4rem;
-  background-color: white;
-  background-image: url('../assets/dark-mode-inativo-24x24.png');
+  background-color: var(--primary-color);
+  background-image: url('../assets/darkmode-scroll-inativo-24x24.png');
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: center;
@@ -920,6 +920,14 @@ footer .social-links {
   nav#navigation .menu .switch {
     margin-inline: 0;
   }
+  nav#navigation .menu .slider {
+    background-color: var(--primary-color);
+  }
+  nav#navigation .menu .slider:before {
+    background-color: #fff;
+    background-image: url('../assets/dark-mode-inativo-24x24.png');
+  }
+  /* ------- */
 
   /* ===== scroll === */
   /* deixar .scroll colado para quando tiver a classe (adiciona via JS ao scroll a pagina) */
