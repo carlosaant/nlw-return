@@ -12,6 +12,15 @@ O projeto foi concluido e as atualizações executadas de acordo com as seguinte
 - [x] Stage 04 - Criar Section Contato, e Footer, Criar um botão pra voltar ao topo da página e Customizar o site com cores personalizadas
 - [x] Stage 05 - Criar versão Desktop do Projeto, restruturar o HTML/CSS utilizando Grid na versão Desktop, criar função JS para deixar o menu com estado "active" entre as sections que estao na tela conforme rolagem.
 
+## 🔧 Ajustes e Melhorias
+
+Com base no projeto realizado conforme #nlw, e estudos, foram realizadas a parte os seguintes ajustes e melhorias:
+
+- [x] DarkMode, opçao para a pagina ficar mais confortavel aos olhos, em versão Mobile e Desktop
+- [ ] Sessão de comentários sobre o tema do projeto em si
+- [ ] Formulario para contato direto
+- [ ] Sessão Mapa com localizaçao do endereço (ficticio) sobre o tema do projeto
+
 ## 💻 Visualização do Projeto
 
 - Stage 01
