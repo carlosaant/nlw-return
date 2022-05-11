@@ -708,6 +708,25 @@ body.menu-expanded button path {
   padding-block: 3.2rem;
 
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.25rem;
+}
+
+#testimonials blockquote p {
+  position: relative;
+  /* da um recuo no texto para encaixar o span absolute */
+  text-indent: 3rem;
+}
+#testimonials blockquote p span {
+  font-weight: 700;
+  font-size: 4.8rem;
+  font-family: serif;
+
+  position: absolute;
+  top: -1rem;
+  /* recuo negativo para ecaixar no espaço do text-ident */
+  left: -3rem;
+
+  color: var(--primary-color);
 }
 /*  ======================CONTACT/CONTATO==================== */
 
