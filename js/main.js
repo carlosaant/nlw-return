@@ -134,4 +134,16 @@ ScrollReveal({
 #about,
 #about header,
 #about .content,
+#testimonials,
 #contact`); //sequencia qual aparece primeiro
+
+// ------------ TESTIMONIALS CAROUSEL SLIDER SWIPER
+
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true
+});

@@ -10,6 +10,11 @@
       type="image/png"
     />
     <title>DoctorCare - Page</title>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -470,61 +475,65 @@
           <h2>Depoimentos de quem já passou por aqui</h2>
         </header>
         <!-- caixa com todos depoimentos -->
-        <div class="testimonials">
-          <!-- caixa depoimento -->
-          <div class="testimonial">
-            <!-- mais significado "quem alguem esta falando alguma coisa, nao eu" -->
-            <blockquote>
-              <p>
-                <span>&ldquo;</span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum
-                cupiditate eos ducimus ipsum. Quod, porro rerum? Ea doloribus
-                sed laboriosam at maxime tempore deserunt labore hic. Nostrum,
-                rerum velit.
-              </p>
-              <!-- citação, quem "falou" -->
-              <cite>
-                <img src="./assets/fotos/60.jpg" alt="" />
-                Fulano Cicrano
-              </cite>
-            </blockquote>
+        <div class="testimonials swiper">
+          <div class="swiper-wrapper">
+            <!-- caixa depoimento -->
+            <div class="testimonial swiper-slide">
+              <!-- mais significado "quem alguem esta falando alguma coisa, nao eu" -->
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                  cum cupiditate eos ducimus ipsum. Quod, porro rerum? Ea
+                  doloribus sed laboriosam at maxime tempore deserunt labore
+                  hic. Nostrum, rerum velit.
+                </p>
+                <!-- citação, quem "falou" -->
+                <cite>
+                  <img src="./assets/fotos/60.jpg" alt="" />
+                  Fulano Cicrano
+                </cite>
+              </blockquote>
+            </div>
+            <!--  -->
+            <div class="testimonial swiper-slide">
+              <!-- mais significado "quem alguem esta falando alguma coisa, nao eu" -->
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                  cum cupiditate eos ducimus ipsum. Quod, porro rerum? Ea
+                  doloribus sed laboriosam at maxime tempore deserunt labore
+                  hic. Nostrum, rerum velit.
+                </p>
+                <!-- citação, quem "falou" -->
+                <cite>
+                  <img src="./assets/fotos/16.jpg" alt="" />
+                  Beltrano Fulano
+                </cite>
+              </blockquote>
+            </div>
+            <!--  -->
+            <div class="testimonial swiper-slide">
+              <!-- mais significado "quem alguem esta falando alguma coisa, nao eu" -->
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                  cum cupiditate eos ducimus ipsum. Quod, porro rerum? Ea
+                  doloribus sed laboriosam at maxime tempore deserunt labore
+                  hic. Nostrum, rerum velit.
+                </p>
+                <!-- citação, quem "falou" -->
+                <cite>
+                  <img src="./assets/fotos/82.jpg" alt="" />
+                  Cicrano Beltrano
+                </cite>
+              </blockquote>
+            </div>
           </div>
-          <!--  -->
-          <div class="testimonial">
-            <!-- mais significado "quem alguem esta falando alguma coisa, nao eu" -->
-            <blockquote>
-              <p>
-                <span>&ldquo;</span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum
-                cupiditate eos ducimus ipsum. Quod, porro rerum? Ea doloribus
-                sed laboriosam at maxime tempore deserunt labore hic. Nostrum,
-                rerum velit.
-              </p>
-              <!-- citação, quem "falou" -->
-              <cite>
-                <img src="./assets/fotos/16.jpg" alt="" />
-                Beltrano Fulano
-              </cite>
-            </blockquote>
-          </div>
-          <!--  -->
-          <div class="testimonial">
-            <!-- mais significado "quem alguem esta falando alguma coisa, nao eu" -->
-            <blockquote>
-              <p>
-                <span>&ldquo;</span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum
-                cupiditate eos ducimus ipsum. Quod, porro rerum? Ea doloribus
-                sed laboriosam at maxime tempore deserunt labore hic. Nostrum,
-                rerum velit.
-              </p>
-              <!-- citação, quem "falou" -->
-              <cite>
-                <img src="./assets/fotos/82.jpg" alt="" />
-                Cicrano Beltrano
-              </cite>
-            </blockquote>
-          </div>
+          <!-- pagination swiper -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -859,6 +868,8 @@
       </svg>
     </a>
 
+    <!-- swiper Js-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- scrollreveal Lib -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/main.js"></script>

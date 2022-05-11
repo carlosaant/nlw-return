@@ -703,6 +703,11 @@ body.menu-expanded button path {
   background-color: #fff;
 }
 
+/* header */
+#testimonials header {
+  padding-bottom: 3rem;
+}
+
 #testimonials blockquote {
   padding-inline: 3.2rem;
   padding-block: 3.2rem;
@@ -754,6 +759,8 @@ body.menu-expanded button path {
   /* cria uma mascara na imagem, no caso um circulo ao redor */
   clip-path: circle();
 }
+
+/* ---swiper --- */
 
 /*  ======================CONTACT/CONTATO==================== */
 
