@@ -715,6 +715,10 @@ body.menu-expanded button path {
   position: relative;
   /* da um recuo no texto para encaixar o span absolute */
   text-indent: 3rem;
+  text-align: initial;
+  color: var(--paragraph);
+
+  margin-bottom: 2.4rem;
 }
 #testimonials blockquote p span {
   font-weight: 700;
@@ -728,6 +732,29 @@ body.menu-expanded button path {
 
   color: var(--primary-color);
 }
+#testimonials cite {
+  display: flex;
+  align-items: center;
+
+  /* padrao do cite é italic */
+  font-style: normal;
+  font-size: 1.6rem;
+
+  color: var(--paragraph);
+}
+
+#testimonials cite img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 0.8rem;
+
+  /* pegar a imagem/objeto e encaixe cobrindo todo espaço disponivel */
+  object-fit: cover;
+
+  /* cria uma mascara na imagem, no caso um circulo ao redor */
+  clip-path: circle();
+}
+
 /*  ======================CONTACT/CONTATO==================== */
 
 /* alinhamento left conforme figma, de todo conteudo */
