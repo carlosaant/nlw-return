@@ -703,9 +703,14 @@ body.menu-expanded button path {
   background-color: #fff;
 }
 
+#testimonials .wrapper {
+  padding-inline: 0;
+}
+
 /* header */
 #testimonials header {
   padding-bottom: 3rem;
+  padding-inline: 2.4rem;
 }
 
 #testimonials blockquote {
@@ -764,6 +769,10 @@ body.menu-expanded button path {
 .swiper-slide {
   height: auto;
   padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color);
 }
 
 /*  ======================CONTACT/CONTATO==================== */
