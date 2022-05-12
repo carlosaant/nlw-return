@@ -146,5 +146,11 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination'
   },
   mousewheel: true,
-  keyboard: true
+  keyboard: true,
+  breakpoints: {
+    1024: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 });
