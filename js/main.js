@@ -134,7 +134,8 @@ ScrollReveal({
 #about,
 #about header,
 #about .content,
-#testimonials,
+#testimonials header,
+#testimonials .testimonial,
 #contact`); //sequencia qual aparece primeiro
 
 // ------------ TESTIMONIALS CAROUSEL SLIDER SWIPER
