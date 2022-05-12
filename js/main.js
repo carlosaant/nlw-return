@@ -1,9 +1,11 @@
 let navigation = document.getElementById('navigation');
 let backToTopButton = document.getElementById('backToTopButton');
+let checkDarkMode = document.getElementById('checkDarkMode');
 
 onload = function () {
   // ou window.add....
   document.addEventListener('scroll', onScroll);
+  checkDarkMode.addEventListener('change', checkDarkModeHasChecked);
 
   // ao iniciar executar uma vez o onScroll() para inserir a funçao caso seja digitado a pagina diretamente ao meio da pagina sem ter dado scroll, pois o scroll ja vai estar >0
   onScroll();
@@ -16,7 +18,18 @@ function onScroll() {
   activateMenuAtCurrentSection(home);
   activateMenuAtCurrentSection(services);
   activateMenuAtCurrentSection(about);
+  activateMenuAtCurrentSection(testimonials);
   activateMenuAtCurrentSection(contact);
+}
+
+function checkDarkModeHasChecked() {
+  if (this.checked) {
+    document.documentElement.classList.add('dark-mode');
+    console.log('Checkbox foi marcado');
+  } else {
+    document.documentElement.classList.remove('dark-mode');
+    console.log('Checkbox foi desmarcado');
+  }
 }
 
 // -----------------
@@ -120,4 +133,24 @@ ScrollReveal({
 #services card,
 #about,
 #about header,
-#about .content`); //sequencia qual aparece primeiro
+#about .content,
+#testimonials header,
+#testimonials .testimonial,
+#contact`); //sequencia qual aparece primeiro
+
+// ------------ TESTIMONIALS CAROUSEL SLIDER SWIPER
+
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true,
+  breakpoints: {
+    1024: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
+});

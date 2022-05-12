@@ -10,6 +10,11 @@
       type="image/png"
     />
     <title>DoctorCare - Page</title>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -74,11 +79,20 @@
             <!-- qndo clicar chama a funçao e fecha o menu indo pra section services -->
             <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
             <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+            <li>
+              <a onclick="closeMenu() " href="#testimonials">Depoimentos</a>
+            </li>
           </ul>
 
           <a onclick="closeMenu()" class="button" href="#contact"
             >Agende sua Consulta</a
           >
+
+          <!-- togle switch -->
+          <label class="switch">
+            <input id="checkDarkMode" type="checkbox" />
+            <span class="slider"></span>
+          </label>
 
           <ul class="social-links">
             <li>
@@ -453,12 +467,85 @@
         </div>
       </div>
     </section>
+
+    <!-- depoimentos -->
+    <section id="testimonials">
+      <div class="wrapper">
+        <header>
+          <h4>Depoimentos</h4>
+          <h2>Depoimentos de quem já passou por aqui</h2>
+        </header>
+        <!-- caixa com todos depoimentos -->
+        <div class="testimonials swiper">
+          <div class="swiper-wrapper">
+            <!-- caixa depoimento -->
+            <div class="testimonial swiper-slide">
+              <!-- mais significado "quem alguem esta falando alguma coisa, nao eu" -->
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                  cum cupiditate eos ducimus ipsum. Quod, porro rerum? Ea
+                  doloribus sed laboriosam at maxime tempore deserunt labore
+                  hic. Nostrum, rerum velit.
+                </p>
+                <!-- citação, quem "falou" -->
+                <cite>
+                  <img src="./assets/fotos/60.jpg" alt="" />
+                  Fulano Cicrano
+                </cite>
+              </blockquote>
+            </div>
+            <!--  -->
+            <div class="testimonial swiper-slide">
+              <!-- mais significado "quem alguem esta falando alguma coisa, nao eu" -->
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                  cum cupiditate eos ducimus ipsum. Quod, porro rerum? Ea
+                  doloribus sed laboriosam at maxime tempore deserunt labore
+                  hic. Nostrum, rerum velit.
+                </p>
+                <!-- citação, quem "falou" -->
+                <cite>
+                  <img src="./assets/fotos/16.jpg" alt="" />
+                  Beltrano Fulano
+                </cite>
+              </blockquote>
+            </div>
+            <!--  -->
+            <div class="testimonial swiper-slide">
+              <!-- mais significado "quem alguem esta falando alguma coisa, nao eu" -->
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                  cum cupiditate eos ducimus ipsum. Quod, porro rerum? Ea
+                  doloribus sed laboriosam at maxime tempore deserunt labore
+                  hic. Nostrum, rerum velit.
+                </p>
+                <!-- citação, quem "falou" -->
+                <cite>
+                  <img src="./assets/fotos/82.jpg" alt="" />
+                  Cicrano Beltrano
+                </cite>
+              </blockquote>
+            </div>
+          </div>
+          <!-- pagination swiper -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- section contact -->
     <section id="contact">
       <div class="wrapper">
         <!-- grid -->
         <div class="col-a">
           <header>
+            <h4>Contato</h4>
             <h2>Entre em contato com a gente!</h2>
           </header>
           <div class="content">
@@ -489,7 +576,7 @@
 
                 R. Amauri Souza, 346
               </li>
-              <li>
+              <!-- <li>
                 <svg
                   width="24"
                   height="24"
@@ -514,9 +601,8 @@
                 </svg>
 
                 contato@doctorcare.com
-              </li>
+              </li> -->
             </ul>
-
             <!-- bottao para o whattsapp -->
             <a class="button" href="#" target="_blank"
               ><svg
@@ -537,10 +623,76 @@
         </div>
 
         <div class="col-b">
-          <img
+          <!-- <img
             src="./assets/homem-negro-com-moletom-bege-mexendo-ao-celular.png"
             alt="homem negro com moletom bege mexendo ao celular e sorrindo"
-          />
+          /> -->
+          <div class="div-formContato">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                  stroke="#00856F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 6L12 13L2 6"
+                  stroke="#00856F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Preencha o formulário
+            </h3>
+            <form action="">
+              <label for="contatoNome">Nome</label>
+              <input
+                type="text"
+                name="contatoNome"
+                id=""
+                placeholder="Seu Nome"
+              />
+              <label for="contatoEmai">Email</label>
+              <input
+                type="email"
+                name="contatoEmail"
+                id=""
+                placeholder="contato@contato.com"
+              />
+              <label for="contatoMensagem">Sua Mensagem</label>
+              <textarea
+                name="contatoMensagem"
+                id=""
+                cols="20"
+                rows="5"
+                placeholder="Sua mensagem aqui.."
+              ></textarea>
+              <a class="button" href="#">
+                Enviar
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.37705 5.94876C2.04299 5.94876 1.77218 6.21956 1.77218 6.55362C1.77218 6.88767 2.04298 7.15848 2.37704 7.15848L2.37705 5.94876ZM10.8379 6.55368L11.2656 6.98138C11.5018 6.74517 11.5018 6.3622 11.2656 6.12598L10.8379 6.55368ZM7.70139 2.5618C7.46517 2.32559 7.0822 2.32559 6.84598 2.5618C6.60977 2.79802 6.60977 3.18099 6.84598 3.41721L7.70139 2.5618ZM6.84598 9.69016C6.60977 9.92637 6.60977 10.3094 6.84598 10.5456C7.0822 10.7818 7.46517 10.7818 7.70139 10.5456L6.84598 9.69016ZM2.37704 7.15848L10.8379 7.15854L10.8379 5.94882L2.37705 5.94876L2.37704 7.15848ZM6.84598 3.41721L10.4102 6.98138L11.2656 6.12598L7.70139 2.5618L6.84598 3.41721ZM10.4102 6.12598L6.84598 9.69016L7.70139 10.5456L11.2656 6.98138L10.4102 6.12598Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -718,6 +870,8 @@
       </svg>
     </a>
 
+    <!-- swiper Js-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- scrollreveal Lib -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/main.js"></script>

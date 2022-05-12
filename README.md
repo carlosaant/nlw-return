@@ -1,6 +1,7 @@
 # DoctorCare - NLW #8 Return
 
-Conteúdo do Evento Rocketseat NLW #8 Return, onde é criado uma Pagina de captura atendendo aos padrões de acessibilidade e utilizando a tecnica Modelo Mobile First, customizando o CSS com animações, e utilizando Lib JavaScript para interatividade.
+Conteúdo do Evento Rocketseat NLW #8 Return, onde foi criada uma Pagina de captura atendendo aos padrões de acessibilidade e utilizando a tecnica Modelo Mobile First, customizando o CSS com animações, e utilizando Lib JavaScript para interatividade.
+O Projeto serviu de grande estudo para desenvolver tecnicas de desenvolvimento, e estilização, alem de aplicar recursos extras.
 
 ### Etapas do Projeto
 
@@ -12,10 +13,18 @@ O projeto foi concluido e as atualizações executadas de acordo com as seguinte
 - [x] Stage 04 - Criar Section Contato, e Footer, Criar um botão pra voltar ao topo da página e Customizar o site com cores personalizadas
 - [x] Stage 05 - Criar versão Desktop do Projeto, restruturar o HTML/CSS utilizando Grid na versão Desktop, criar função JS para deixar o menu com estado "active" entre as sections que estao na tela conforme rolagem.
 
+## 🔧 Ajustes e Melhorias
+
+Com base no projeto finalizado, e estudos, foram realizados os seguintes ajustes e melhorias:
+
+- [x] DarkMode, opçao para a pagina ficar mais confortavel aos olhos, em versão Mobile e Desktop
+- [x] Sessão de depoimentos sobre o tema do projeto em si
+- [x] Formulario para contato direto na sessão de Contact
+
 ## 💻 Visualização do Projeto
 
 - Stage 01
-  ![nlw-stage-01](https://user-images.githubusercontent.com/42329793/166694493-6be768e7-ffba-409a-9d3c-3c2f556ecf20.png)
+  ![doctorcare1](https://user-images.githubusercontent.com/42329793/168129470-4cc90468-a002-4ac2-9619-c0f02d8ee2c3.png)
 
 - Stage 02
   ![nlw-stage-02](https://user-images.githubusercontent.com/42329793/166694538-3f6b066b-72c0-44e4-b47f-80e9f7043913.png)

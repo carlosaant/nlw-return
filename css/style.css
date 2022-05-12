@@ -38,6 +38,21 @@
   --nav-height: 7.2rem;
 }
 
+.dark-mode:root {
+  --hue: 290;
+
+  --primary-color: hsl(var(--hue), 100%, 26%);
+  --headline: hsl(210, 41%, 93%);
+  --paragraph: hsl(0, 0%, 100%);
+  --brand-beige: hsl(0, 2%, 10%);
+
+  --brand-green-light: hsl(0, 0%, 0%);
+  --brand-green-hover: hsl(220, 2%, 30%);
+
+  /* vai ser aplicado a todo body */
+  --brand-green-light2: hsl(0, 0%, 0%);
+}
+
 html {
   /* scroll suave */
   scroll-behavior: smooth;
@@ -360,7 +375,7 @@ body.menu-expanded .menu {
   padding-inline: 3.2rem;
 
   margin-top: 4.8rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 
 .menu .button:hover {
@@ -377,7 +392,75 @@ body.menu-expanded .menu {
   justify-content: center;
   /* espaçamento entre os elementos */
   gap: 3.2rem;
+
+  margin-top: 4rem;
 }
+
+/* =============== The switch - the box around the slider ========*/
+nav#navigation .menu .switch {
+  position: relative;
+
+  display: block;
+  margin-inline: auto;
+
+  width: 6rem;
+  height: 3.4rem;
+}
+
+/* Hide default HTML checkbox */
+nav#navigation .menu .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+nav#navigation .menu .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+
+  transition: 0.4s;
+
+  border-radius: 3.4rem;
+}
+
+nav#navigation .menu .slider:before {
+  position: absolute;
+  content: '';
+  height: 2.6rem;
+  width: 2.6rem;
+  left: 0.4rem;
+  bottom: 0.4rem;
+  background-color: var(--primary-color);
+  background-image: url('../assets/darkmode-scroll-inativo-24x24.png');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+
+  transition: 0.4s;
+
+  border-radius: 50%;
+}
+
+nav#navigation .menu .switch input:checked + .slider {
+  background-color: #ccc;
+}
+
+/* nav#navigation .menu .switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+} */
+
+/* faz o movimento de switch */
+nav#navigation .menu .switch input:checked + .slider:before {
+  transform: translateX(2.6rem);
+}
+
+/* -------------END SWITCH -------------- */
 
 /* precisa colocar a logo e o botao no mesmo nivel do menu-expanded */
 body.menu-expanded .logo,
@@ -579,7 +662,7 @@ body.menu-expanded button path {
   padding: 2.4rem;
   text-align: left;
 
-  background: #ffffff;
+  background: #fff;
 
   border: 1px solid var(--brand-green-light);
   border-radius: 0.6rem;
@@ -615,6 +698,85 @@ body.menu-expanded button path {
   margin-bottom: 6rem;
 }
 
+/*  ======================TESTIMONIALS==================== */
+#testimonials {
+  background-color: #fff;
+}
+
+#testimonials .wrapper {
+  padding-inline: 0;
+  /* ----\/ ----- */
+  display: block;
+}
+
+/* header */
+#testimonials header {
+  padding-bottom: 3rem;
+  padding-inline: 2.4rem;
+}
+
+#testimonials blockquote {
+  padding-inline: 3.2rem;
+  padding-block: 3.2rem;
+
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.25rem;
+}
+
+#testimonials blockquote p {
+  position: relative;
+  /* da um recuo no texto para encaixar o span absolute */
+  text-indent: 3rem;
+  text-align: initial;
+  color: var(--paragraph);
+
+  margin-bottom: 2.4rem;
+}
+#testimonials blockquote p span {
+  font-weight: 700;
+  font-size: 4.8rem;
+  font-family: serif;
+
+  position: absolute;
+  top: -1rem;
+  /* recuo negativo para ecaixar no espaço do text-ident */
+  left: -3rem;
+
+  color: var(--primary-color);
+}
+#testimonials cite {
+  display: flex;
+  align-items: center;
+
+  /* padrao do cite é italic */
+  font-style: normal;
+  font-size: 1.6rem;
+
+  color: var(--paragraph);
+}
+
+#testimonials cite img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 0.8rem;
+
+  /* pegar a imagem/objeto e encaixe cobrindo todo espaço disponivel */
+  object-fit: cover;
+
+  /* cria uma mascara na imagem, no caso um circulo ao redor */
+  clip-path: circle();
+}
+
+/* ---swiper --- */
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color);
+}
+
 /*  ======================CONTACT/CONTATO==================== */
 
 /* alinhamento left conforme figma, de todo conteudo */
@@ -647,7 +809,62 @@ body.menu-expanded button path {
   margin-bottom: 6rem;
 }
 
-/*  ======================CONTACT/CONTATO==================== */
+/* ------formulario contato ------- */
+#contact .div-formContato {
+  width: 100%;
+  background-color: var(--brand-green-light);
+  border-radius: 10px;
+}
+
+#contact .div-formContato form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+}
+
+#contact .div-formContato h3 {
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-top: 4.8rem;
+  padding-bottom: 3.6rem;
+
+  gap: 1.6rem;
+
+  font-size: 2rem;
+}
+#contact .div-formContato h3 svg path {
+  stroke: var(--primary-color);
+}
+
+#contact .div-formContato form label {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+
+  color: var(--brand-green-hover);
+}
+
+#contact .div-formContato form textarea,
+#contact .div-formContato form input {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.2rem;
+  padding: 1.6rem;
+  background-color: var(--brand-green-light2);
+  border: 1px solid var(--primary-color);
+  border-radius: 0.6rem;
+
+  resize: none;
+}
+
+#contact .div-formContato a.button {
+  border-radius: 1rem;
+}
+
+/*  ======================FOOTER==================== */
 
 footer {
   background-color: var(--primary-color);
@@ -815,7 +1032,7 @@ footer .social-links {
     justify-content: center;
     align-items: center;
 
-    padding: 1rem 2.4rem;
+    padding: 1rem 1.5rem;
 
     border: 1px solid var(--primary-color);
     border-radius: 4rem;
@@ -832,6 +1049,19 @@ footer .social-links {
     color: var(--brand-green-light2);
     border: none;
   }
+
+  /* retira margin switch versao desk */
+  nav#navigation .menu .switch {
+    margin-inline: 0;
+  }
+  nav#navigation .menu .slider {
+    background-color: var(--primary-color);
+  }
+  nav#navigation .menu .slider:before {
+    background-color: #fff;
+    background-image: url('../assets/dark-mode-inativo-24x24.png');
+  }
+  /* ------- */
 
   /* ===== scroll === */
   /* deixar .scroll colado para quando tiver a classe (adiciona via JS ao scroll a pagina) */
@@ -900,6 +1130,15 @@ footer .social-links {
   nav#navigation .menu ul li a.active,
   nav#navigation .menu ul li a:hover {
     opacity: 1;
+  }
+
+  /* switch .slider com scroll */
+  nav#navigation.scroll .menu .slider {
+    background-color: #fff;
+  }
+  nav#navigation.scroll .menu .slider:before {
+    background-color: var(--primary-color);
+    background-image: url('../assets/darkmode-scroll-inativo-24x24.png');
   }
 
   /* =======================HOME==========================*/
@@ -1029,10 +1268,17 @@ footer .social-links {
   #contact .wrapper {
     grid-template-columns: 1fr 57.5rem;
     grid-template-areas: 'A B';
+
+    align-items: center;
   }
 
   #contact h2 {
     width: 40.4rem;
+  }
+
+  #contact .div-formContato h3,
+  #contact .div-formContato form {
+    padding-inline: 4.8rem;
   }
 
   /* =======================FOOTER==========================*/
