@@ -953,7 +953,7 @@ footer .social-links {
     display: grid;
   }
 
-  .col-b {
+  .col-a {
     /* vai ocupar a Coluna A */
     grid-area: A;
   }
