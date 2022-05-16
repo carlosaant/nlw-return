@@ -23,7 +23,7 @@ Com base no projeto finalizado, e estudos, foram realizados os seguintes ajustes
 
 ## 💻 Visualização do Projeto
 
-- Stage 01
+- Stage 01  
   ![doctorcare1](https://user-images.githubusercontent.com/42329793/168129470-4cc90468-a002-4ac2-9619-c0f02d8ee2c3.png)
 
 - Stage 02
